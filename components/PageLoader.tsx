@@ -40,7 +40,7 @@ export default function PageLoader() {
       <div className="mb-8">
         <img 
           src="/images/alba-decor-logo.png" 
-          alt="Alba Homes" 
+          alt="Alba Decor" 
           className="h-16 w-auto"
         />
       </div>

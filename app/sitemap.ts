@@ -1,7 +1,7 @@
 import { MetadataRoute } from 'next';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://albahomes.co.uk';
+  const baseUrl = 'https://albadecor.co.uk';
 
   // Main pages
   const mainPages = [
@@ -30,6 +30,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.9,
     },
     {
+      url: `${baseUrl}/blog`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly' as const,
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/gallery`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly' as const,
+      priority: 0.8,
+    },
+    {
       url: `${baseUrl}/locations`,
       lastModified: new Date(),
       changeFrequency: 'monthly' as const,
@@ -37,135 +49,55 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
   ];
 
-  // Service category pages
-  const serviceCategories = [
-    'painting-decorating',
-    'interior-decorating',
-    'wallpaper-installation'
+  // Consolidated service pages (12 main services)
+  const consolidatedServices = [
+    'interior-painting',
+    'exterior-painting',
+    'cabinet-furniture-painting',
+    'decorative-finishes',
+    'wallpaper-services',
+    'wood-finishing',
+    'floor-sanding-varnishing',
+    'silicone-sealing',
+    'commercial-painting',
+    'residential-painting',
+    'spray-painting',
+    'color-consultation'
   ];
 
-  const serviceCategoryPages = serviceCategories.map(category => ({
-    url: `${baseUrl}/services/${category}`,
+  const consolidatedServicePages = consolidatedServices.map(service => ({
+    url: `${baseUrl}/services/${service}`,
     lastModified: new Date(),
     changeFrequency: 'weekly' as const,
     priority: 0.8,
   }));
 
-  // Individual service pages - Painting & Decorating
-  const paintingServices = [
-    'interior-painting',
-    'exterior-painting',
-    'cabinet-painting',
-    'hand-painted-kitchens',
-    'deck-painting',
-    'door-painting',
-    'drywall-painting',
-    'drywall-repair',
-    'faux-finishes',
-    'furniture-painting',
-    'mural-painting',
-    'speciality-design-painting',
-    'spray-painting',
-    'wallpaper-hanging',
-    'wallpaper-removal',
-    'wood-painting',
-    'wood-staining',
-    'wood-varnishing',
-    'venetian-plaster',
-    'textured-walls',
-    'floor-sanding',
-    'floor-varnishing',
-    'hand-painted-wardrobes',
-    'bathroom-silicone-removal-and-application',
-    'kitchen-silicone-removal-and-application',
-    'commercial-painting',
-    'residential-painting',
-    'hotel-painting',
-    'pub-painting',
-    'newly-built-house-painting'
-  ];
-
-  const paintingServicePages = paintingServices.map(service => ({
-    url: `${baseUrl}/services/painting-decorating/${service}`,
-    lastModified: new Date(),
-    changeFrequency: 'monthly' as const,
-    priority: 0.7,
-  }));
-
-  // Interior Decorating services
-  const interiorServices = [
-    'venetian-plaster',
-    'decorative-wall-finishes',
-    'textured-wall-design',
-    'feature-wall-design',
-    'mural-design-and-painting',
-    'hand-painted-kitchen-cabinets',
-    'hand-painted-wardrobes',
-    'custom-furniture-painting',
-    'color-consultation',
-    'interior-paint-color-selection',
-    'decorative-plasterwork',
-    'specialty-paint-finishes',
-    'faux-finishing',
-    'wall-art-and-murals',
-    'bespoke-interior-painting',
-    'luxury-interior-finishes'
-  ];
-
-  const interiorServicePages = interiorServices.map(service => ({
-    url: `${baseUrl}/services/interior-decorating/${service}`,
-    lastModified: new Date(),
-    changeFrequency: 'monthly' as const,
-    priority: 0.7,
-  }));
-
-  // Wallpaper services
-  const wallpaperServices = [
-    'wallpaper-hanging',
-    'wallpaper-removal',
-    'wallpaper-installation',
-    'feature-wall-wallpapering',
-    'commercial-wallpaper-installation',
-    'residential-wallpaper-services',
-    'wallpaper-repair',
-    'designer-wallpaper-hanging',
-    'vinyl-wallpaper-installation',
-    'textured-wallpaper',
-    'accent-wall-wallpaper'
-  ];
-
-  const wallpaperServicePages = wallpaperServices.map(service => ({
-    url: `${baseUrl}/services/wallpaper-installation/${service}`,
-    lastModified: new Date(),
-    changeFrequency: 'monthly' as const,
-    priority: 0.7,
-  }));
-
   // Location pages
   const locations = [
+    'potters-bar',
     'barnet',
-    'watford',
-    'st-albans',
-    'harrow',
+    'hadley-wood',
+    'totteridge',
     'enfield',
-    'stevenage',
-    'hertford',
-    'potters-bar'
+    'cockfosters',
+    'southgate',
+    'winchmore-hill',
+    'cuffley',
+    'northaw'
   ];
 
   const locationPages = locations.map(location => ({
     url: `${baseUrl}/locations/${location}`,
     lastModified: new Date(),
-    changeFrequency: 'monthly' as const,
-    priority: 0.6,
+    // CHANGE THIS: Tell Google these are active "Money Pages"
+    changeFrequency: 'weekly' as const,
+    // CHANGE THIS: Make them as important as your "About" page
+    priority: 0.9,
   }));
 
   return [
     ...mainPages,
-    ...serviceCategoryPages,
-    ...paintingServicePages,
-    ...interiorServicePages,
-    ...wallpaperServicePages,
+    ...consolidatedServicePages,
     ...locationPages,
   ];
 }

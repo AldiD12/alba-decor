@@ -81,7 +81,7 @@ export default function ContactPageClient() {
               <div className="w-8 h-8 bg-alba-accent rounded-lg flex items-center justify-center">
                 <Phone className="w-5 h-5 text-white" />
               </div>
-              <span className="text-alba-accent font-semibold text-sm tracking-wider uppercase">Contact Alba Homes</span>
+              <span className="text-alba-accent font-semibold text-sm tracking-wider uppercase">Contact Alba Decor</span>
             </div>
 
             <h1 className="font-display text-hero-mobile md:text-6xl font-bold text-alba-primary mb-6 decorative-line">
@@ -144,7 +144,7 @@ export default function ContactPageClient() {
             Ready to Start Your Project?
           </h2>
           <p className="text-subheading-mobile text-alba-cream/90 max-w-2xl mx-auto mb-8">
-            Don't wait - contact Alba Homes today for your free consultation and quote.
+            Don't wait - contact Alba Decor today for your free consultation and quote.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button asChild className="bg-alba-gold hover:bg-alba-accent text-alba-primary font-semibold">

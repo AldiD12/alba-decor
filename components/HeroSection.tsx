@@ -21,7 +21,7 @@ export default function HeroSection({ onGetQuote }: HeroSectionProps) {
       <div className="absolute inset-0">
         <img
           src="/images/hero-kitchen.webp"
-          alt="Professional painting and decorating services - Alba Homes kitchen transformation in London and Hertfordshire"
+          alt="Professional painting and decorating services - Alba Decor kitchen transformation in London and Hertfordshire"
           className="w-full h-full object-cover hero-bg-mobile"
           loading="eager"
           fetchPriority="high"

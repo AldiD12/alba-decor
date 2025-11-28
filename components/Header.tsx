@@ -39,36 +39,104 @@ export default function Header({ onGetQuote }: HeaderProps) {
               </button>
               
               {/* Services Dropdown */}
-              <div className="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-elegant border border-alba-cream opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
-                <div className="p-2">
+              <div className="absolute top-full left-0 mt-2 w-72 bg-white rounded-lg shadow-elegant border border-alba-cream opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                <div className="p-2 max-h-96 overflow-y-auto">
                   <Link
                     href="/services"
-                    className="block px-4 py-3 text-sm font-medium text-alba-primary hover:bg-alba-cream rounded-lg transition-colors"
+                    className="block px-4 py-3 text-sm font-medium text-alba-primary hover:bg-alba-cream rounded-lg transition-colors border-b border-alba-cream mb-2"
                   >
                     All Services
                   </Link>
-                  <Link
-                    href="/services/painting-decorating"
-                    className="block px-4 py-3 text-sm text-alba-charcoal hover:bg-alba-cream rounded-lg transition-colors"
-                  >
-                    Painting & Decorating
-                  </Link>
-                  <Link
-                    href="/services/interior-decorating"
-                    className="block px-4 py-3 text-sm text-alba-charcoal hover:bg-alba-cream rounded-lg transition-colors"
-                  >
-                    Interior Decorating
-                  </Link>
-                  <Link
-                    href="/services/wallpaper-installation"
-                    className="block px-4 py-3 text-sm text-alba-charcoal hover:bg-alba-cream rounded-lg transition-colors"
-                  >
-                    Wallpaper Installation
-                  </Link>
+                  <div className="grid grid-cols-1 gap-1">
+                    <Link
+                      href="/services/interior-painting"
+                      className="block px-4 py-2 text-xs text-alba-charcoal hover:bg-alba-cream rounded-lg transition-colors"
+                    >
+                      Interior Painting
+                    </Link>
+                    <Link
+                      href="/services/exterior-painting"
+                      className="block px-4 py-2 text-xs text-alba-charcoal hover:bg-alba-cream rounded-lg transition-colors"
+                    >
+                      Exterior Painting
+                    </Link>
+                    <Link
+                      href="/services/cabinet-furniture-painting"
+                      className="block px-4 py-2 text-xs text-alba-charcoal hover:bg-alba-cream rounded-lg transition-colors"
+                    >
+                      Cabinet & Furniture Painting
+                    </Link>
+                    <Link
+                      href="/services/decorative-finishes"
+                      className="block px-4 py-2 text-xs text-alba-charcoal hover:bg-alba-cream rounded-lg transition-colors"
+                    >
+                      Decorative Finishes
+                    </Link>
+                    <Link
+                      href="/services/wallpaper-services"
+                      className="block px-4 py-2 text-xs text-alba-charcoal hover:bg-alba-cream rounded-lg transition-colors"
+                    >
+                      Wallpaper Services
+                    </Link>
+                    <Link
+                      href="/services/wood-finishing"
+                      className="block px-4 py-2 text-xs text-alba-charcoal hover:bg-alba-cream rounded-lg transition-colors"
+                    >
+                      Wood Finishing
+                    </Link>
+                    <Link
+                      href="/services/floor-services"
+                      className="block px-4 py-2 text-xs text-alba-charcoal hover:bg-alba-cream rounded-lg transition-colors"
+                    >
+                      Floor Services
+                    </Link>
+                    <Link
+                      href="/services/silicone-sealing"
+                      className="block px-4 py-2 text-xs text-alba-charcoal hover:bg-alba-cream rounded-lg transition-colors"
+                    >
+                      Silicone Sealing
+                    </Link>
+                    <Link
+                      href="/services/commercial-painting"
+                      className="block px-4 py-2 text-xs text-alba-charcoal hover:bg-alba-cream rounded-lg transition-colors"
+                    >
+                      Commercial Painting
+                    </Link>
+                    <Link
+                      href="/services/residential-painting"
+                      className="block px-4 py-2 text-xs text-alba-charcoal hover:bg-alba-cream rounded-lg transition-colors"
+                    >
+                      Residential Painting
+                    </Link>
+                    <Link
+                      href="/services/spray-painting"
+                      className="block px-4 py-2 text-xs text-alba-charcoal hover:bg-alba-cream rounded-lg transition-colors"
+                    >
+                      Spray Painting
+                    </Link>
+                    <Link
+                      href="/services/color-consultation"
+                      className="block px-4 py-2 text-xs text-alba-charcoal hover:bg-alba-cream rounded-lg transition-colors"
+                    >
+                      Color Consultation
+                    </Link>
+                  </div>
                 </div>
               </div>
             </div>
 
+            <Link href="/gallery" className="text-sm font-semibold text-alba-charcoal hover:text-alba-accent transition-colors relative group">
+              GALLERY
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-alba-gold group-hover:w-full transition-all duration-300"></span>
+            </Link>
+            <Link href="/blog" className="text-sm font-semibold text-alba-charcoal hover:text-alba-accent transition-colors relative group">
+              BLOG
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-alba-gold group-hover:w-full transition-all duration-300"></span>
+            </Link>
+            <Link href="/locations" className="text-sm font-semibold text-alba-charcoal hover:text-alba-accent transition-colors relative group">
+              AREAS COVERED
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-alba-gold group-hover:w-full transition-all duration-300"></span>
+            </Link>
             <Link href="/contact" className="text-sm font-semibold text-alba-charcoal hover:text-alba-accent transition-colors relative group">
               CONTACT
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-alba-gold group-hover:w-full transition-all duration-300"></span>

@@ -7,47 +7,89 @@ interface ServicesSectionProps {
 
 const services = [
   {
-    title: 'Painting & Decorating',
-    subtitle: 'Primary Service Category',
-    description: 'We are professional painters and decorators serving London and Hertfordshire with comprehensive painting and decorating solutions.',
-    image: 'https://images.pexels.com/photos/1571463/pexels-photo-1571463.jpeg?auto=compress&cs=tinysrgb&w=800',
+    title: 'Interior Painting',
+    subtitle: 'Transform Your Living Spaces',
+    description: 'Professional interior painting services for all rooms in your home with premium paints and expert application.',
+    image: '/images/gallery/interior/interior-living-room-modern.webp',
     features: [
-      'Interior & Exterior Painting',
-      'Commercial & Residential', 
-      'Cabinet & Furniture Painting',
-      'Drywall & Wood Finishes'
+      'Living Rooms & Bedrooms',
+      'Kitchens & Bathrooms',
+      'Ceilings & Feature Walls',
+      'Color Consultation'
     ],
     icon: '🎨',
-    href: '/services/painting-decorating'
+    href: '/services/interior-painting'
   },
   {
-    title: 'Interior Decorating',
-    subtitle: 'Specialty Design Services',
-    description: 'Expert interior decorating with bespoke finishes and custom design solutions for discerning clients.',
-    image: 'https://images.pexels.com/photos/6585759/pexels-photo-6585759.jpeg?auto=compress&cs=tinysrgb&w=800',
+    title: 'Exterior Painting',
+    subtitle: 'Protect & Beautify Your Property',
+    description: 'Weather-resistant exterior painting services that protect your property while enhancing curb appeal.',
+    image: '/images/gallery/exterior/exterior-modern-home.webp',
+    features: [
+      'House Exteriors & Render',
+      'Windows & Door Frames',
+      'Fascias & Soffits',
+      'Weather Protection'
+    ],
+    icon: '🏠',
+    href: '/services/exterior-painting'
+  },
+  {
+    title: 'Cabinet & Furniture',
+    subtitle: 'Kitchen & Furniture Transformations',
+    description: 'Hand-painted kitchen cabinets and furniture restoration with durable, beautiful finishes.',
+    image: '/images/gallery/kitchen/kitchen-cabinets-hand-painted.webp',
+    features: [
+      'Kitchen Cabinet Painting',
+      'Wardrobe Transformations',
+      'Furniture Restoration',
+      'Custom Color Matching'
+    ],
+    icon: '🪑',
+    href: '/services/cabinet-furniture-painting'
+  },
+  {
+    title: 'Decorative Finishes',
+    subtitle: 'Luxury Wall Treatments',
+    description: 'Stunning decorative finishes including Venetian plaster, textured walls, and specialty techniques.',
+    image: '/images/gallery/decorative/decorative-venetian-plaster.webp',
     features: [
       'Venetian Plaster',
-      'Decorative Wall Finishes',
-      'Hand-Painted Kitchens',
-      'Mural Design'
+      'Textured Walls',
+      'Faux Finishes',
+      'Feature Walls'
     ],
     icon: '✨',
-    href: '/services/interior-decorating'
+    href: '/services/decorative-finishes'
   },
   {
-    title: 'Wallpaper Installation',
-    subtitle: 'Professional Hanging & Removal',
-    description: 'Precision wallpaper installation and removal services for residential and commercial properties.',
-    image: 'https://images.pexels.com/photos/6585756/pexels-photo-6585756.jpeg?auto=compress&cs=tinysrgb&w=800',
+    title: 'Wallpaper Services',
+    subtitle: 'Expert Installation & Removal',
+    description: 'Professional wallpaper hanging, removal, and repair services with precision pattern matching.',
+    image: '/images/gallery/wallpaper/wallpaper-feature-wall-dining.webp',
     features: [
       'Professional Hanging',
+      'Pattern Matching',
       'Wallpaper Removal',
-      'Feature Walls',
-      'Commercial Installation'
+      'Designer Papers'
     ],
     icon: '📐',
-    href: '/services/wallpaper-installation'
+    href: '/services/wallpaper-services'
   },
+  {
+    title: 'Commercial Painting',
+    subtitle: 'Business & Office Solutions',
+    description: 'Professional painting services for offices, retail spaces, restaurants, and commercial properties.',
+    image: '/images/gallery/commercial/commercial-office-space.webp',
+    features: [
+      'Offices & Retail Spaces',
+      'Restaurants & Hotels',
+      'Scheduled Maintenance',
+      'Minimal Disruption'
+    ],
+    icon: '🏢',
+    href: '/services/commercial-painting'
+  }
 ];
 
 export default function ServicesSection({ onGetQuote }: ServicesSectionProps) {
@@ -70,57 +112,52 @@ export default function ServicesSection({ onGetQuote }: ServicesSectionProps) {
             <span className="block text-alba-accent italic">for Your Home or Business</span>
           </h2>
           
-          <p className="text-alba-charcoal/70 text-lg md:text-xl max-w-3xl mx-auto leading-relaxed">
-            Professional services across painting, decorating, interior design, and wallpaper installation.
+          <p className="text-alba-charcoal/70 text-base sm:text-lg md:text-xl max-w-3xl mx-auto leading-relaxed">
+            From interior and exterior painting to decorative finishes and commercial services - we deliver exceptional results across North London and Hertfordshire.
           </p>
         </div>
 
-        {/* Services grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12">
+        {/* Services grid - Mobile First Design */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
           {services.map((service, index) => (
             <div
               key={index}
-              className="group relative bg-white rounded-2xl overflow-hidden shadow-elegant hover:shadow-elegant-hover transition-all duration-500 hover:-translate-y-2"
+              className="group relative bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
             >
-              {/* Image container */}
-              <div className="relative h-64 overflow-hidden">
-                <div
-                  className="absolute inset-0 bg-cover bg-center transition-all duration-700 group-hover:scale-110"
-                  style={{ backgroundImage: `url(${service.image})` }}
+              {/* Image container - Mobile optimized */}
+              <div className="relative h-48 sm:h-52 md:h-56 overflow-hidden">
+                <img
+                  src={service.image}
+                  alt={`${service.title} services by Alba Decor`}
+                  className="w-full h-full object-cover transition-all duration-500 group-hover:scale-105"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-alba-primary/80 via-alba-primary/40 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-alba-primary/70 via-alba-primary/30 to-transparent" />
                 
-                {/* Service number */}
-                <div className="absolute top-4 right-4 w-12 h-12 bg-alba-gold rounded-full flex items-center justify-center">
-                  <span className="text-white font-bold text-lg">{index + 1}</span>
+                {/* Service icon - Mobile friendly */}
+                <div className="absolute top-3 right-3 w-10 h-10 sm:w-12 sm:h-12 bg-alba-gold rounded-full flex items-center justify-center shadow-lg">
+                  <span className="text-lg sm:text-xl">{service.icon}</span>
                 </div>
               </div>
 
-              {/* Content */}
-              <div className="p-8">
-                {/* Service Icon and Category */}
-                <div className="flex items-center gap-3 mb-4">
-                  <span className="text-3xl">{service.icon}</span>
-                  <div>
-                    <h3 className="font-display text-2xl font-bold text-alba-primary group-hover:text-alba-accent transition-colors">
-                      {service.title}
-                    </h3>
-                    <p className="text-sm text-alba-accent font-medium">{service.subtitle}</p>
-                  </div>
+              {/* Content - Mobile optimized spacing */}
+              <div className="p-4 sm:p-6">
+                {/* Title and subtitle */}
+                <div className="mb-3">
+                  <h3 className="font-display text-lg sm:text-xl font-bold text-alba-primary group-hover:text-alba-accent transition-colors mb-1">
+                    {service.title}
+                  </h3>
+                  <p className="text-xs sm:text-sm text-alba-accent font-medium">{service.subtitle}</p>
                 </div>
                 
-                <p className="text-alba-charcoal/70 mb-6 leading-relaxed">
+                <p className="text-alba-charcoal/70 text-sm leading-relaxed mb-4">
                   {service.description}
                 </p>
 
-                {/* Services include label */}
-                <h4 className="text-sm font-semibold text-alba-primary mb-3">Services include:</h4>
-
-                {/* Features list */}
-                <ul className="space-y-2 mb-6">
+                {/* Features list - Compact for mobile */}
+                <ul className="space-y-1 mb-4">
                   {service.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center gap-3 text-sm text-alba-charcoal/80">
-                      <div className="w-1.5 h-1.5 bg-alba-accent rounded-full"></div>
+                    <li key={featureIndex} className="flex items-center gap-2 text-xs sm:text-sm text-alba-charcoal/80">
+                      <div className="w-1 h-1 bg-alba-accent rounded-full flex-shrink-0"></div>
                       {feature}
                     </li>
                   ))}
@@ -129,18 +166,28 @@ export default function ServicesSection({ onGetQuote }: ServicesSectionProps) {
                 <Button
                   asChild
                   variant="outline"
-                  className="btn-alba-secondary w-full group-hover:bg-alba-primary group-hover:border-alba-primary group-hover:text-white"
+                  className="w-full text-sm border-alba-primary text-alba-primary hover:bg-alba-primary hover:text-white transition-all duration-200"
                 >
                   <Link href={service.href}>
-                    View All {service.title} Services →
+                    Learn More →
                   </Link>
                 </Button>
               </div>
-
-              {/* Decorative corner */}
-              <div className="absolute top-0 left-0 w-20 h-20 bg-gradient-to-br from-alba-gold/20 to-transparent"></div>
             </div>
           ))}
+        </div>
+
+        {/* View All Services Button */}
+        <div className="text-center mt-8 sm:mt-12">
+          <Button
+            asChild
+            variant="outline"
+            className="border-2 border-alba-accent text-alba-accent hover:bg-alba-accent hover:text-white px-6 py-3 text-base font-semibold"
+          >
+            <Link href="/services">
+              View All 12 Services →
+            </Link>
+          </Button>
         </div>
 
         {/* Call to action */}

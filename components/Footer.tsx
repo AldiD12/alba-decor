@@ -95,6 +95,40 @@ export default function Footer({ onGetQuote }: FooterProps) {
             </ul>
           </div>
 
+          {/* Areas Covered */}
+          <div>
+            <h3 className="font-display text-xl font-bold mb-6 text-alba-gold decorative-line">
+              Areas Covered
+            </h3>
+            <ul className="space-y-3">
+              {[
+                { name: 'Painters Potters Bar', href: '/locations/potters-bar' },
+                { name: 'Painters Barnet', href: '/locations/barnet' },
+                { name: 'Painters Hadley Wood', href: '/locations/hadley-wood' },
+                { name: 'Painters Totteridge', href: '/locations/totteridge' },
+                { name: 'Painters Enfield', href: '/locations/enfield' },
+              ].map((location, index) => (
+                <li key={index}>
+                  <Link
+                    href={location.href}
+                    className="flex items-center gap-2 text-alba-cream/80 hover:text-alba-gold hover:translate-x-1 transition-all group"
+                  >
+                    <span className="text-alba-accent group-hover:text-alba-gold transition-colors">→</span>
+                    {location.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+            <div className="mt-4">
+              <Link
+                href="/locations"
+                className="text-alba-gold hover:text-alba-cream transition-colors text-sm font-semibold"
+              >
+                View All Areas →
+              </Link>
+            </div>
+          </div>
+
           {/* Quick Links */}
           <div>
             <h3 className="font-display text-xl font-bold mb-6 text-alba-gold decorative-line">

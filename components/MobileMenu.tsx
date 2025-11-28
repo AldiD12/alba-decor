@@ -11,6 +11,7 @@ interface MobileMenuProps {
 
 export default function MobileMenu({ onGetQuote }: MobileMenuProps) {
   const [isOpen, setIsOpen] = useState(false);
+  const [servicesOpen, setServicesOpen] = useState(false);
 
   return (
     <div className="lg:hidden">
@@ -47,37 +48,147 @@ export default function MobileMenu({ onGetQuote }: MobileMenuProps) {
               
               {/* Services */}
               <div className="space-y-1">
-                <Link
-                  href="/services"
-                  className="block px-4 py-4 text-alba-primary font-semibold hover:bg-alba-cream rounded-lg transition-colors"
-                  onClick={() => setIsOpen(false)}
-                >
-                  ALL SERVICES
-                </Link>
-                <Link
-                  href="/services/painting-decorating"
-                  className="block px-6 py-3 text-alba-charcoal hover:bg-alba-cream rounded-lg transition-colors text-sm"
-                  onClick={() => setIsOpen(false)}
-                >
-                  Painting & Decorating
-                </Link>
-                <Link
-                  href="/services/interior-decorating"
-                  className="block px-6 py-3 text-alba-charcoal hover:bg-alba-cream rounded-lg transition-colors text-sm"
-                  onClick={() => setIsOpen(false)}
-                >
-                  Interior Decorating
-                </Link>
-                <Link
-                  href="/services/wallpaper-installation"
-                  className="block px-6 py-3 text-alba-charcoal hover:bg-alba-cream rounded-lg transition-colors text-sm"
-                  onClick={() => setIsOpen(false)}
-                >
-                  Wallpaper Installation
-                </Link>
+                <div className="flex items-center justify-between">
+                  <Link
+                    href="/services"
+                    className="flex-1 px-4 py-4 text-alba-primary font-semibold hover:bg-alba-cream rounded-lg transition-colors"
+                    onClick={() => setIsOpen(false)}
+                  >
+                    SERVICES
+                  </Link>
+                  <button
+                    onClick={() => setServicesOpen(!servicesOpen)}
+                    className="px-4 py-4 text-alba-primary hover:bg-alba-cream rounded-lg transition-colors"
+                  >
+                    <ChevronDown className={`w-4 h-4 transition-transform ${servicesOpen ? 'rotate-180' : ''}`} />
+                  </button>
+                </div>
+                
+                {servicesOpen && (
+                  <div className="grid grid-cols-2 gap-1 px-2 pb-2">
+                    <Link
+                      href="/services/interior-painting"
+                      className="block px-3 py-2 text-alba-charcoal hover:bg-alba-cream rounded-lg transition-colors text-xs"
+                      onClick={() => setIsOpen(false)}
+                    >
+                      Interior Painting
+                    </Link>
+                    <Link
+                      href="/services/exterior-painting"
+                      className="block px-3 py-2 text-alba-charcoal hover:bg-alba-cream rounded-lg transition-colors text-xs"
+                      onClick={() => setIsOpen(false)}
+                    >
+                      Exterior Painting
+                    </Link>
+                    <Link
+                      href="/services/cabinet-furniture-painting"
+                      className="block px-3 py-2 text-alba-charcoal hover:bg-alba-cream rounded-lg transition-colors text-xs"
+                      onClick={() => setIsOpen(false)}
+                    >
+                      Cabinet Painting
+                    </Link>
+                    <Link
+                      href="/services/decorative-finishes"
+                      className="block px-3 py-2 text-alba-charcoal hover:bg-alba-cream rounded-lg transition-colors text-xs"
+                      onClick={() => setIsOpen(false)}
+                    >
+                      Decorative Finishes
+                    </Link>
+                    <Link
+                      href="/services/wallpaper-services"
+                      className="block px-3 py-2 text-alba-charcoal hover:bg-alba-cream rounded-lg transition-colors text-xs"
+                      onClick={() => setIsOpen(false)}
+                    >
+                      Wallpaper Services
+                    </Link>
+                    <Link
+                      href="/services/wood-finishing"
+                      className="block px-3 py-2 text-alba-charcoal hover:bg-alba-cream rounded-lg transition-colors text-xs"
+                      onClick={() => setIsOpen(false)}
+                    >
+                      Wood Finishing
+                    </Link>
+                    <Link
+                      href="/services/floor-services"
+                      className="block px-3 py-2 text-alba-charcoal hover:bg-alba-cream rounded-lg transition-colors text-xs"
+                      onClick={() => setIsOpen(false)}
+                    >
+                      Floor Services
+                    </Link>
+                    <Link
+                      href="/services/silicone-sealing"
+                      className="block px-3 py-2 text-alba-charcoal hover:bg-alba-cream rounded-lg transition-colors text-xs"
+                      onClick={() => setIsOpen(false)}
+                    >
+                      Silicone Sealing
+                    </Link>
+                    <Link
+                      href="/services/commercial-painting"
+                      className="block px-3 py-2 text-alba-charcoal hover:bg-alba-cream rounded-lg transition-colors text-xs"
+                      onClick={() => setIsOpen(false)}
+                    >
+                      Commercial
+                    </Link>
+                    <Link
+                      href="/services/residential-painting"
+                      className="block px-3 py-2 text-alba-charcoal hover:bg-alba-cream rounded-lg transition-colors text-xs"
+                      onClick={() => setIsOpen(false)}
+                    >
+                      Residential
+                    </Link>
+                    <Link
+                      href="/services/spray-painting"
+                      className="block px-3 py-2 text-alba-charcoal hover:bg-alba-cream rounded-lg transition-colors text-xs"
+                      onClick={() => setIsOpen(false)}
+                    >
+                      Spray Painting
+                    </Link>
+                    <Link
+                      href="/services/color-consultation"
+                      className="block px-3 py-2 text-alba-charcoal hover:bg-alba-cream rounded-lg transition-colors text-xs"
+                      onClick={() => setIsOpen(false)}
+                    >
+                      Color Consultation
+                    </Link>
+                  </div>
+                )}
               </div>
               
-
+              {/* Gallery */}
+              <Link
+                href="/gallery"
+                className="px-4 py-4 text-alba-primary font-semibold hover:bg-alba-cream rounded-lg transition-colors"
+                onClick={() => setIsOpen(false)}
+              >
+                GALLERY
+              </Link>
+              
+              {/* Blog */}
+              <Link
+                href="/blog"
+                className="px-4 py-4 text-alba-primary font-semibold hover:bg-alba-cream rounded-lg transition-colors"
+                onClick={() => setIsOpen(false)}
+              >
+                BLOG
+              </Link>
+              
+              {/* Areas Covered */}
+              <Link
+                href="/locations"
+                className="px-4 py-4 text-alba-primary font-semibold hover:bg-alba-cream rounded-lg transition-colors"
+                onClick={() => setIsOpen(false)}
+              >
+                AREAS COVERED
+              </Link>
+              
+              {/* Contact */}
+              <Link
+                href="/contact"
+                className="px-4 py-4 text-alba-primary font-semibold hover:bg-alba-cream rounded-lg transition-colors"
+                onClick={() => setIsOpen(false)}
+              >
+                CONTACT
+              </Link>
 
               {/* Contact Info */}
               <div className="border-t border-alba-cream pt-4 mt-4">

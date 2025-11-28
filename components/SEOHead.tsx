@@ -26,7 +26,7 @@ export default function SEOHead({
   location = 'London & Hertfordshire',
   breadcrumbs = []
 }: SEOHeadProps) {
-  const fullTitle = `${title} | Alba Homes`;
+  const fullTitle = `${title} | Alba Decor`;
   const fullDescription = description.length > 160 ? description.substring(0, 157) + '...' : description;
 
   // Generate structured data for service pages
@@ -37,9 +37,9 @@ export default function SEOHead({
     "description": description,
     "provider": {
       "@type": "LocalBusiness",
-      "name": "Alba Homes",
+      "name": "Alba Decor",
       "telephone": "07404304224",
-      "url": "https://albahomes.co.uk",
+      "url": "https://albadecor.co.uk",
       "address": {
         "@type": "PostalAddress",
         "addressLocality": "London",
@@ -67,7 +67,7 @@ export default function SEOHead({
       "@type": "ListItem",
       "position": index + 1,
       "name": crumb.name,
-      "item": `https://albahomes.co.uk${crumb.url}`
+      "item": `https://albadecor.co.uk${crumb.url}`
     }))
   } : null;
 
@@ -77,7 +77,7 @@ export default function SEOHead({
       <meta name="description" content={fullDescription} />
       {keywords && <meta name="keywords" content={keywords} />}
       <meta name="robots" content="index, follow" />
-      <meta name="author" content="Alba Homes" />
+      <meta name="author" content="Alba Decor" />
       
       {/* Canonical URL */}
       {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
@@ -86,9 +86,9 @@ export default function SEOHead({
       <meta property="og:title" content={fullTitle} />
       <meta property="og:description" content={fullDescription} />
       <meta property="og:type" content="website" />
-      <meta property="og:url" content={canonicalUrl || 'https://albahomes.co.uk'} />
+      <meta property="og:url" content={canonicalUrl || 'https://albadecor.co.uk'} />
       <meta property="og:image" content={ogImage} />
-      <meta property="og:site_name" content="Alba Homes" />
+      <meta property="og:site_name" content="Alba Decor" />
       <meta property="og:locale" content="en_GB" />
       
       {/* Twitter Card */}

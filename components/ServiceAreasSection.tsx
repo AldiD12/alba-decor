@@ -7,25 +7,20 @@ interface ServiceAreasSectionProps {
 }
 
 const serviceAreas = [
-  { name: 'Barnet', region: 'North London', postcode: 'EN4, EN5' },
-  { name: 'Watford', region: 'Hertfordshire', postcode: 'WD17-WD25' },
-  { name: 'Hatfield', region: 'Hertfordshire', postcode: 'AL9, AL10' },
-  { name: 'Brentford', region: 'West London', postcode: 'TW8' },
-  { name: 'Hoddesdon', region: 'Hertfordshire', postcode: 'EN11' },
-  { name: 'St Albans', region: 'Hertfordshire', postcode: 'AL1-AL4' },
-  { name: 'Stevenage', region: 'Hertfordshire', postcode: 'SG1, SG2' },
-  { name: 'Broxbourne', region: 'Hertfordshire', postcode: 'EN10' },
+  { name: 'Barnet', region: 'North London', postcode: 'EN5, N20' },
   { name: 'Potters Bar', region: 'Hertfordshire', postcode: 'EN6' },
-  { name: 'Ealing', region: 'West London', postcode: 'W5, W13' },
-  { name: 'Hackney', region: 'East London', postcode: 'E8, E9' },
-  { name: 'Islington', region: 'North London', postcode: 'N1, N7' },
-  { name: 'Welwyn Garden City', region: 'Hertfordshire', postcode: 'AL7, AL8' },
-  { name: 'Camden Town', region: 'Central London', postcode: 'NW1' },
-  { name: 'Redbridge', region: 'East London', postcode: 'IG1-IG6' },
-  { name: 'Waltham Forest', region: 'East London', postcode: 'E10, E11, E17' },
-  { name: 'Haringey', region: 'North London', postcode: 'N4, N8, N15, N17' },
+  { name: 'Hadley Wood', region: 'North London', postcode: 'EN4' },
+  { name: 'Totteridge', region: 'North London', postcode: 'N20' },
   { name: 'Enfield', region: 'North London', postcode: 'EN1-EN3' },
-  { name: 'Harrow', region: 'North West London', postcode: 'HA1-HA3' }
+  { name: 'Cockfosters', region: 'North London', postcode: 'EN4' },
+  { name: 'Southgate', region: 'North London', postcode: 'N14' },
+  { name: 'Winchmore Hill', region: 'North London', postcode: 'N21' },
+  { name: 'Cuffley', region: 'Hertfordshire', postcode: 'EN6' },
+  { name: 'Northaw', region: 'Hertfordshire', postcode: 'EN6' },
+  { name: 'St Albans', region: 'Hertfordshire', postcode: 'AL1-AL4' },
+  { name: 'Watford', region: 'Hertfordshire', postcode: 'WD17-WD25' },
+  { name: 'Brookmans Park', region: 'Hertfordshire', postcode: 'AL9' },
+  { name: 'Waltham Cross', region: 'Hertfordshire', postcode: 'EN8' }
 ];
 
 export default function ServiceAreasSection({ onGetQuote }: ServiceAreasSectionProps) {
@@ -66,11 +61,11 @@ export default function ServiceAreasSection({ onGetQuote }: ServiceAreasSectionP
                 {/* Stats Grid */}
                 <div className="grid grid-cols-2 gap-4 mb-6">
                   <div className="text-center p-4 bg-alba-cream/50 rounded-lg">
-                    <div className="text-2xl font-bold text-alba-primary">19+</div>
-                    <div className="text-xs text-alba-charcoal/70">Areas Covered</div>
+                    <div className="text-2xl font-bold text-alba-primary">14</div>
+                    <div className="text-xs text-alba-charcoal/70">Premium Areas</div>
                   </div>
                   <div className="text-center p-4 bg-alba-cream/50 rounded-lg">
-                    <div className="text-2xl font-bold text-alba-accent">50+</div>
+                    <div className="text-2xl font-bold text-alba-accent">25+</div>
                     <div className="text-xs text-alba-charcoal/70">Postcodes</div>
                   </div>
                 </div>
@@ -79,19 +74,19 @@ export default function ServiceAreasSection({ onGetQuote }: ServiceAreasSectionP
                 <div className="space-y-3 flex-1">
                   <div className="flex items-center gap-3 p-3 bg-alba-primary/5 rounded-lg">
                     <div className="w-3 h-3 bg-alba-primary rounded-full"></div>
-                    <span className="text-sm font-medium text-alba-primary">Central London Areas</span>
+                    <span className="text-sm font-medium text-alba-primary">High-Value North London</span>
                   </div>
                   <div className="flex items-center gap-3 p-3 bg-alba-secondary/5 rounded-lg">
                     <div className="w-3 h-3 bg-alba-secondary rounded-full"></div>
-                    <span className="text-sm font-medium text-alba-secondary">North London Boroughs</span>
+                    <span className="text-sm font-medium text-alba-secondary">Premium Hertfordshire</span>
                   </div>
                   <div className="flex items-center gap-3 p-3 bg-alba-accent/5 rounded-lg">
                     <div className="w-3 h-3 bg-alba-accent rounded-full"></div>
-                    <span className="text-sm font-medium text-alba-accent">Hertfordshire Towns</span>
+                    <span className="text-sm font-medium text-alba-accent">Exclusive Villages</span>
                   </div>
                   <div className="flex items-center gap-3 p-3 bg-alba-gold/5 rounded-lg">
                     <div className="w-3 h-3 bg-alba-gold rounded-full"></div>
-                    <span className="text-sm font-medium text-alba-gold">M25 Corridor</span>
+                    <span className="text-sm font-medium text-alba-gold">Wealthy Enclaves</span>
                   </div>
                 </div>
 
@@ -121,46 +116,71 @@ export default function ServiceAreasSection({ onGetQuote }: ServiceAreasSectionP
               <span className="block text-alba-accent italic">Cover</span>
             </h2>
 
-            <p className="text-alba-charcoal/70 text-lg mb-10 leading-relaxed">
-              Professional painting and decorating services across London, Hertfordshire, 
-              and surrounding areas. Covering over 50+ postcodes with reliable, local service.
+            <p className="text-alba-charcoal/80 text-lg mb-6 leading-relaxed font-medium">
+              Alba Decor provides professional painting and decorating services across North London and Hertfordshire. 
+              We focus on premium areas where we can deliver exceptional service and build lasting relationships with discerning homeowners.
+            </p>
+
+            <p className="text-alba-charcoal/70 text-base mb-10 leading-relaxed">
+              Specializing in high-value properties across the wealthy North London belt, from exclusive villages like Hadley Wood 
+              and Totteridge to prestigious Hertfordshire locations including Cuffley and Brookmans Park.
             </p>
 
             {/* Service Areas Grid */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-10 max-h-80 overflow-y-auto pr-2">
-              {serviceAreas.map((area, index) => (
-                <div key={index} className="flex items-center justify-between group p-3 rounded-lg hover:bg-alba-cream/50 transition-colors border border-transparent hover:border-alba-accent/20">
-                  <div className="flex items-center gap-3">
-                    <div className="w-6 h-6 bg-alba-accent/10 rounded-full flex items-center justify-center group-hover:bg-alba-accent/20 transition-colors flex-shrink-0">
-                      <Check className="w-3 h-3 text-alba-accent" />
+              {serviceAreas.map((area, index) => {
+                // Create slug for areas that might have location pages
+                const slug = area.name.toLowerCase().replace(/\s+/g, '-');
+                // Check against actual location pages that exist
+                const hasLocationPage = [
+                  'potters-bar', 'barnet', 'hadley-wood', 'totteridge', 'enfield', 
+                  'cockfosters', 'southgate', 'winchmore-hill', 'cuffley', 'northaw'
+                ].includes(slug);
+                
+                const content = (
+                  <div className="flex items-center justify-between group p-3 rounded-lg hover:bg-alba-cream/50 transition-colors border border-transparent hover:border-alba-accent/20">
+                    <div className="flex items-center gap-3">
+                      <div className="w-6 h-6 bg-alba-accent/10 rounded-full flex items-center justify-center group-hover:bg-alba-accent/20 transition-colors flex-shrink-0">
+                        <Check className="w-3 h-3 text-alba-accent" />
+                      </div>
+                      <div>
+                        <span className="text-alba-primary font-semibold text-sm group-hover:text-alba-accent transition-colors">
+                          Painters in {area.name}
+                        </span>
+                        <div className="text-xs text-alba-charcoal/60">{area.region}</div>
+                      </div>
                     </div>
-                    <div>
-                      <span className="text-alba-primary font-semibold text-sm group-hover:text-alba-accent transition-colors">
-                        {area.name}
-                      </span>
-                      <div className="text-xs text-alba-charcoal/60">{area.region}</div>
-                    </div>
+                    <span className="text-xs text-alba-charcoal/50 font-mono">
+                      {area.postcode}
+                    </span>
                   </div>
-                  <span className="text-xs text-alba-charcoal/50 font-mono">
-                    {area.postcode}
-                  </span>
-                </div>
-              ))}
+                );
+
+                return hasLocationPage ? (
+                  <a key={index} href={`/locations/${slug}`} className="block">
+                    {content}
+                  </a>
+                ) : (
+                  <div key={index}>
+                    {content}
+                  </div>
+                );
+              })}
             </div>
 
             {/* Coverage Summary */}
             <div className="bg-gradient-to-r from-alba-primary to-alba-secondary p-6 rounded-xl text-white mb-6">
               <div className="flex items-center gap-3 mb-3">
-                <span className="text-2xl">📍</span>
-                <h3 className="font-display text-xl font-bold">Complete M25 Coverage</h3>
+                <span className="text-2xl">💎</span>
+                <h3 className="font-display text-xl font-bold">Premium Service Areas</h3>
               </div>
               <p className="text-alba-cream/90 mb-3">
-                Serving 50+ postcodes across London & Hertfordshire with professional painting and decorating services.
+                Focused coverage across North London's most desirable areas and premium Hertfordshire locations.
               </p>
               <div className="flex flex-wrap gap-2">
-                <span className="px-2 py-1 bg-alba-gold/20 rounded text-xs font-medium">London Boroughs</span>
-                <span className="px-2 py-1 bg-alba-gold/20 rounded text-xs font-medium">Hertfordshire</span>
-                <span className="px-2 py-1 bg-alba-gold/20 rounded text-xs font-medium">M25 Corridor</span>
+                <span className="px-2 py-1 bg-alba-gold/20 rounded text-xs font-medium">High-Value Properties</span>
+                <span className="px-2 py-1 bg-alba-gold/20 rounded text-xs font-medium">Exclusive Villages</span>
+                <span className="px-2 py-1 bg-alba-gold/20 rounded text-xs font-medium">Premium Postcodes</span>
               </div>
             </div>
 
@@ -177,8 +197,10 @@ export default function ServiceAreasSection({ onGetQuote }: ServiceAreasSectionP
               <Button onClick={onGetQuote} className="btn-alba-primary">
                 Get Quote for Your Area
               </Button>
-              <Button variant="outline" className="btn-alba-secondary">
-                View All Locations
+              <Button variant="outline" className="btn-alba-secondary" asChild>
+                <a href="/locations">
+                  All Painting Services by Location
+                </a>
               </Button>
             </div>
           </div>

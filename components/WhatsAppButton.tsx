@@ -5,7 +5,7 @@ import { useState } from 'react';
 export default function WhatsAppButton() {
     const [isHovered, setIsHovered] = useState(false);
 
-    // Alba Homes WhatsApp number (replace with actual number)
+    // Alba Decor WhatsApp number (replace with actual number)
     const whatsappNumber = "447404304224"; // UK format without + sign
     const message = "Hello! I'm interested in your painting and decorating services. Could you please provide more information?";
 
