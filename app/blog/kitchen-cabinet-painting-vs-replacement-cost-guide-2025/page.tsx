@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Metadata } from 'next';
-import QuoteButton from '@/components/QuoteButton';
+import { QuoteButton } from '@/components/QuoteButton';
 
 export const metadata: Metadata = {
   title: 'Kitchen Cabinet Painting vs Replacement: Complete 2025 Cost Guide | Alba Decor',
@@ -344,7 +344,7 @@ export default function KitchenCabinetCostGuidePage() {
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4">
-                <QuoteButton>Get Your Free Kitchen Quote</QuoteButton>
+                <QuoteButton className="w-full sm:w-auto" />
                 <Link href="/services/painting-decorating/hand-painted-kitchens">
                   <Button variant="outline" className="border-alba-primary text-alba-primary hover:bg-alba-primary hover:text-white w-full">
                     View Our Kitchen Work
