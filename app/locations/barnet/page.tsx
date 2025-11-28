@@ -40,7 +40,7 @@ const testimonials = [
     area: 'East Barnet',
     postcode: 'EN4',
     rating: 10,
-    text: 'Alba Homes transformed our home in East Barnet. The interior painting work was flawless and completed on time and within budget.'
+    text: 'Alba Decor transformed our home in East Barnet. The interior painting work was flawless and completed on time and within budget.'
   },
   {
     name: 'Emma Williams',
@@ -76,7 +76,7 @@ export default function BarnetPage() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "LocalBusiness",
-            "name": "Alba Homes - Painters & Decorators Barnet",
+            "name": "Alba Decor - Painters & Decorators Barnet",
             "description": "Professional painting and decorating services in Barnet, covering EN4, EN5, N11, N12, N14, N20 postcodes",
             "telephone": "07404304224",
             "url": "https://albahomes.co.uk/locations/barnet",

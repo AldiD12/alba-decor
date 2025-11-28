@@ -17,7 +17,7 @@ const teamMembers = [
         role: 'Founder & Lead Decorator',
         experience: '12+ years',
         specialties: ['Interior Design', 'Venetian Plaster', 'Color Consultation'],
-        description: 'Alex founded Alba Homes with a vision to provide exceptional painting and decorating services across London and Hertfordshire.',
+        description: 'Alex founded Alba Decor with a vision to provide exceptional painting and decorating services across London and Hertfordshire.',
         image: 'https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=400'
     },
     {
@@ -96,7 +96,7 @@ export default function AboutPageClient() {
                         "@type": "AboutPage",
                         "mainEntity": {
                             "@type": "LocalBusiness",
-                            "name": "Alba Homes",
+                            "name": "Alba Decor",
                             "description": "Professional painting, decorating, and interior design services across London and Hertfordshire",
                             "foundingDate": "2015",
                             "numberOfEmployees": "10-20",
@@ -125,7 +125,7 @@ export default function AboutPageClient() {
                                 <div className="w-8 h-8 bg-alba-accent rounded-lg flex items-center justify-center">
                                     <Heart className="w-5 h-5 text-white" />
                                 </div>
-                                <span className="text-alba-accent font-semibold text-sm tracking-wider uppercase">About Alba Homes</span>
+                                <span className="text-alba-accent font-semibold text-sm tracking-wider uppercase">About Alba Decor</span>
                             </div>
 
                             <h1 className="font-display text-hero-mobile md:text-6xl font-bold text-alba-primary mb-6 decorative-line">
@@ -134,7 +134,7 @@ export default function AboutPageClient() {
                             </h1>
 
                             <p className="text-body-mobile text-alba-charcoal/80 mb-8 leading-relaxed">
-                                Since 2010, Alba Homes has been the trusted choice for professional painting, decorating, and interior design services across London and Hertfordshire. We combine traditional craftsmanship with modern techniques to deliver exceptional results that transform your space and exceed your expectations.
+                                Since 2010, Alba Decor has been the trusted choice for professional painting, decorating, and interior design services across London and Hertfordshire. We combine traditional craftsmanship with modern techniques to deliver exceptional results that transform your space and exceed your expectations.
                             </p>
 
                             <div className="flex flex-col sm:flex-row gap-4">
@@ -152,7 +152,7 @@ export default function AboutPageClient() {
                             <div className="bg-white p-2 rounded-2xl shadow-elegant">
                                 <img
                                     src="https://images.pexels.com/photos/6585759/pexels-photo-6585759.jpeg?auto=compress&cs=tinysrgb&w=800"
-                                    alt="Alba Homes team working on a professional painting project in London"
+                                    alt="Alba Decor team working on a professional painting project in London"
                                     className="w-full h-[400px] object-cover rounded-xl"
                                     loading="lazy"
                                 />
@@ -203,7 +203,7 @@ export default function AboutPageClient() {
                         Ready to Transform Your Space?
                     </h2>
                     <p className="text-subheading-mobile text-alba-charcoal/70 max-w-2xl mx-auto mb-8">
-                        Join hundreds of satisfied customers who have trusted Alba Homes with their painting and decorating projects. Get your free consultation today.
+                        Join hundreds of satisfied customers who have trusted Alba Decor with their painting and decorating projects. Get your free consultation today.
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
                         <Button onClick={handleGetQuote} className="btn-alba-primary">

@@ -141,7 +141,7 @@ export default function ServiceTier3Template() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <h2 className="font-display text-heading-mobile md:text-4xl font-bold text-alba-primary mb-12 text-center">
-              Why Choose Alba Homes
+              Why Choose Alba Decor
             </h2>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -186,7 +186,7 @@ export default function ServiceTier3Template() {
             Ready for Professional {serviceData.name}?
           </h2>
           <p className="text-subheading-mobile text-alba-cream/90 max-w-2xl mx-auto mb-8">
-            Contact Alba Homes today for expert {serviceData.name.toLowerCase()} services in London and Hertfordshire.
+            Contact Alba Decor today for expert {serviceData.name.toLowerCase()} services in London and Hertfordshire.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button onClick={handleGetQuote} className="bg-alba-gold hover:bg-alba-accent text-alba-primary font-semibold">

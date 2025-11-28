@@ -215,7 +215,7 @@ export default function ServiceTier2Template() {
             Get Your Free Quote Today
           </h2>
           <p className="text-subheading-mobile text-alba-cream/90 max-w-2xl mx-auto mb-8">
-            Contact Alba Homes for professional {serviceData.name.toLowerCase()} services across London and Hertfordshire.
+            Contact Alba Decor for professional {serviceData.name.toLowerCase()} services across London and Hertfordshire.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button onClick={handleGetQuote} className="bg-alba-gold hover:bg-alba-accent text-alba-primary font-semibold">

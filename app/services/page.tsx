@@ -305,12 +305,12 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      {/* Why Choose Alba Homes */}
+      {/* Why Choose Alba Decor */}
       <section className="py-20 md:py-28 bg-alba-cream">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="font-display text-heading-mobile md:text-5xl font-bold text-alba-primary mb-8 decorative-line">
-              Why Choose Alba Homes
+              Why Choose Alba Decor
             </h2>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
@@ -349,7 +349,7 @@ export default function ServicesPage() {
             Ready to Transform Your Space?
           </h2>
           <p className="text-subheading-mobile text-alba-cream/90 max-w-2xl mx-auto mb-8">
-            Get in touch today for a free consultation and discover how Alba Homes can bring your vision to life.
+            Get in touch today for a free consultation and discover how Alba Decor can bring your vision to life.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button onClick={handleGetQuote} className="bg-alba-gold hover:bg-alba-accent text-alba-primary font-semibold">
