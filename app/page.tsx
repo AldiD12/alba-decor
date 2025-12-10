@@ -6,7 +6,6 @@ import WhyChooseSection from '@/components/WhyChooseSection';
 import ServicesSection from '@/components/ServicesSection';
 import ServiceAreasSection from '@/components/ServiceAreasSection';
 import GoogleReviewsSection from '@/components/GoogleReviewsSection';
-import ClientsSection from '@/components/ClientsSection';
 
 export default function Home() {
   const handleGetQuote = () => {
@@ -22,7 +21,6 @@ export default function Home() {
       <ServicesSection onGetQuote={handleGetQuote} />
       <ServiceAreasSection onGetQuote={handleGetQuote} />
       <GoogleReviewsSection onGetQuote={handleGetQuote} />
-      <ClientsSection onGetQuote={handleGetQuote} />
     </main>
   );
 }
