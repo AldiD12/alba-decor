@@ -75,12 +75,12 @@ export default function Footer({ onGetQuote }: FooterProps) {
             </h3>
             <ul className="space-y-3">
               {[
-                { name: 'Interior Painting', href: '/painting' },
-                { name: 'Decorating', href: '/decorating' },
-                { name: 'Interior Design', href: '/interior-design' },
-                { name: 'Wallpaper Installation', href: '/wallpaper' },
-                { name: 'Color Consultation', href: '/consultation' },
-                { name: 'Commercial Projects', href: '/commercial' },
+                { name: 'Interior Painting', href: '/services/interior-painting' },
+                { name: 'Exterior Painting', href: '/services/exterior-painting' },
+                { name: 'Wallpaper Services', href: '/services/wallpaper-services' },
+                { name: 'Kitchen Cabinet Painting', href: '/services/cabinet-furniture-painting' },
+                { name: 'Decorative Finishes', href: '/services/decorative-finishes' },
+                { name: 'Commercial Painting', href: '/services/commercial-painting' },
               ].map((service, index) => (
                 <li key={index}>
                   <Link
@@ -107,6 +107,8 @@ export default function Footer({ onGetQuote }: FooterProps) {
                 { name: 'Painters Hadley Wood', href: '/locations/hadley-wood' },
                 { name: 'Painters Totteridge', href: '/locations/totteridge' },
                 { name: 'Painters Enfield', href: '/locations/enfield' },
+                { name: 'Painters Cockfosters', href: '/locations/cockfosters' },
+                { name: 'Painters Southgate', href: '/locations/southgate' },
               ].map((location, index) => (
                 <li key={index}>
                   <Link
@@ -137,10 +139,10 @@ export default function Footer({ onGetQuote }: FooterProps) {
             <ul className="space-y-3">
               {[
                 { name: 'About Us', href: '/about' },
-                { name: 'Portfolio', href: '/portfolio' },
-                { name: 'Reviews', href: '/reviews' },
-                { name: 'Get Quote', href: '/quote' },
-                { name: 'Contact', href: '/contact' },
+                { name: 'Our Gallery', href: '/gallery' },
+                { name: 'All Services', href: '/services' },
+                { name: 'All Locations', href: '/locations' },
+                { name: 'Contact Us', href: '/contact' },
                 { name: 'Blog', href: '/blog' },
               ].map((link, index) => (
                 <li key={index}>
@@ -153,25 +155,29 @@ export default function Footer({ onGetQuote }: FooterProps) {
                   </Link>
                 </li>
               ))}
+              <li>
+                <button
+                  onClick={onGetQuote}
+                  className="flex items-center gap-2 text-alba-cream/80 hover:text-alba-gold hover:translate-x-1 transition-all group cursor-pointer"
+                >
+                  <span className="text-alba-accent group-hover:text-alba-gold transition-colors">→</span>
+                  Get Free Quote
+                </button>
+              </li>
             </ul>
 
-            {/* Social Media */}
+            {/* Contact CTA */}
             <div className="mt-8">
-              <h4 className="text-alba-gold font-semibold mb-4">Follow Us</h4>
-              <div className="flex gap-3">
-                <a
-                  href="#"
-                  className="w-10 h-10 bg-alba-accent/20 rounded-full flex items-center justify-center hover:bg-alba-accent hover:scale-110 transition-all"
-                >
-                  <Facebook className="w-5 h-5" />
-                </a>
-                <a
-                  href="#"
-                  className="w-10 h-10 bg-alba-accent/20 rounded-full flex items-center justify-center hover:bg-alba-accent hover:scale-110 transition-all"
-                >
-                  <Instagram className="w-5 h-5" />
-                </a>
-              </div>
+              <h4 className="text-alba-gold font-semibold mb-4">Get Started</h4>
+              <button
+                onClick={onGetQuote}
+                className="w-full bg-alba-accent hover:bg-alba-gold text-alba-primary font-semibold py-3 px-4 rounded-lg transition-all hover:scale-105"
+              >
+                Get Free Quote
+              </button>
+              <p className="text-alba-cream/60 text-xs mt-2 text-center">
+                No obligation • Free consultation
+              </p>
             </div>
           </div>
         </div>
@@ -180,11 +186,13 @@ export default function Footer({ onGetQuote }: FooterProps) {
         <div className="border-t border-alba-cream/10 mt-16 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <div className="text-alba-cream/60 text-sm">
-              © 2025 Alba Decor Homes. All rights reserved.
+              © 2025 Alba Decor. All rights reserved.
             </div>
             <div className="flex items-center gap-6 text-sm text-alba-cream/60">
-              <Link href="/privacy" className="hover:text-alba-gold transition-colors">Privacy Policy</Link>
-              <Link href="/terms" className="hover:text-alba-gold transition-colors">Terms of Service</Link>
+              <span>Professional Painters & Decorators</span>
+              <span>•</span>
+              <span>London & Hertfordshire</span>
+              <span>•</span>
               <span>Made with ❤️ in London</span>
             </div>
           </div>

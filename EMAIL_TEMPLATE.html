@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Quote Request - Alba Decor</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f8f9fa;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .header {
+            background: linear-gradient(135deg, #162F4F 0%, #2C5282 100%);
+            color: white;
+            padding: 30px 20px;
+            text-align: center;
+        }
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .tagline {
+            font-size: 14px;
+            opacity: 0.9;
+        }
+        .content {
+            padding: 30px 20px;
+        }
+        .section {
+            margin-bottom: 25px;
+            padding: 20px;
+            background-color: #f8f9fa;
+            border-radius: 8px;
+            border-left: 4px solid #D4AF37;
+        }
+        .section-title {
+            color: #162F4F;
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+        .section-title::before {
+            content: "📋";
+            margin-right: 10px;
+            font-size: 20px;
+        }
+        .customer-details .section-title::before {
+            content: "👤";
+        }
+        .project-details .section-title::before {
+            content: "🎨";
+        }
+        .info-row {
+            display: flex;
+            margin-bottom: 10px;
+            padding: 8px 0;
+            border-bottom: 1px solid #e9ecef;
+        }
+        .info-row:last-child {
+            border-bottom: none;
+        }
+        .info-label {
+            font-weight: bold;
+            color: #162F4F;
+            width: 120px;
+            flex-shrink: 0;
+        }
+        .info-value {
+            color: #495057;
+            flex: 1;
+        }
+        .description-box {
+            background-color: #ffffff;
+            border: 1px solid #dee2e6;
+            border-radius: 6px;
+            padding: 15px;
+            margin-top: 10px;
+            font-style: italic;
+            color: #495057;
+        }
+        .priority-badge {
+            display: inline-block;
+            background-color: #D4AF37;
+            color: white;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+        .footer {
+            background-color: #162F4F;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            font-size: 14px;
+        }
+        .footer a {
+            color: #D4AF37;
+            text-decoration: none;
+        }
+        .cta-section {
+            background-color: #D4AF37;
+            color: #162F4F;
+            padding: 20px;
+            text-align: center;
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+        .cta-title {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        @media (max-width: 600px) {
+            .info-row {
+                flex-direction: column;
+            }
+            .info-label {
+                width: auto;
+                margin-bottom: 5px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <div class="logo">Alba Decor</div>
+            <div class="tagline">Professional Painting & Decorating</div>
+        </div>
+
+        <!-- Content -->
+        <div class="content">
+            <h1 style="color: #162F4F; margin-bottom: 20px; font-size: 24px;">
+                🎉 New Quote Request Received!
+            </h1>
+            
+            <p style="color: #495057; margin-bottom: 25px;">
+                You have received a new quote request from your Alba Decor website. 
+                <span class="priority-badge">Action Required</span>
+            </p>
+
+            <!-- Customer Details Section -->
+            <div class="section customer-details">
+                <div class="section-title">Customer Information</div>
+                <div class="info-row">
+                    <div class="info-label">Name:</div>
+                    <div class="info-value">{{from_name}}</div>
+                </div>
+                <div class="info-row">
+                    <div class="info-label">Email:</div>
+                    <div class="info-value"><a href="mailto:{{from_email}}" style="color: #D4AF37;">{{from_email}}</a></div>
+                </div>
+                <div class="info-row">
+                    <div class="info-label">Phone:</div>
+                    <div class="info-value"><a href="tel:{{phone}}" style="color: #D4AF37;">{{phone}}</a></div>
+                </div>
+                <div class="info-row">
+                    <div class="info-label">Postcode:</div>
+                    <div class="info-value">{{postcode}}</div>
+                </div>
+            </div>
+
+            <!-- Project Details Section -->
+            <div class="section project-details">
+                <div class="section-title">Project Information</div>
+                <div class="info-row">
+                    <div class="info-label">Service Type:</div>
+                    <div class="info-value">{{service_type}}</div>
+                </div>
+                <div class="info-row">
+                    <div class="info-label">Timeframe:</div>
+                    <div class="info-value">{{timeframe}}</div>
+                </div>
+                <div class="info-row">
+                    <div class="info-label">Budget Range:</div>
+                    <div class="info-value">{{budget}}</div>
+                </div>
+                <div style="margin-top: 15px;">
+                    <div class="info-label" style="margin-bottom: 10px;">Project Description:</div>
+                    <div class="description-box">{{project_description}}</div>
+                </div>
+            </div>
+
+            <!-- Call to Action -->
+            <div class="cta-section">
+                <div class="cta-title">⏰ Response Required Within 24 Hours</div>
+                <p style="margin: 10px 0; font-size: 14px;">
+                    Contact the customer promptly to provide your professional quote and secure this project.
+                </p>
+            </div>
+
+            <!-- Quick Actions -->
+            <div style="text-align: center; margin: 25px 0;">
+                <p style="color: #495057; margin-bottom: 15px; font-weight: bold;">Quick Actions:</p>
+                <a href="tel:{{phone}}" style="display: inline-block; background-color: #162F4F; color: white; padding: 12px 20px; text-decoration: none; border-radius: 6px; margin: 0 5px; font-weight: bold;">📞 Call Customer</a>
+                <a href="mailto:{{from_email}}" style="display: inline-block; background-color: #D4AF37; color: #162F4F; padding: 12px 20px; text-decoration: none; border-radius: 6px; margin: 0 5px; font-weight: bold;">✉️ Send Email</a>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <p style="margin: 0 0 10px 0;">
+                <strong>Alba Decor</strong> - Professional Painting & Decorating
+            </p>
+            <p style="margin: 0; font-size: 12px; opacity: 0.8;">
+                This email was automatically generated from your website contact form.<br>
+                <a href="https://albadecor.co.uk">albadecor.co.uk</a> | 
+                <a href="tel:07404304224">07404 304224</a> | 
+                <a href="mailto:fjorentin@albadecor.co.uk">fjorentin@albadecor.co.uk</a>
+            </p>
+        </div>
+    </div>
+</body>
+</html>

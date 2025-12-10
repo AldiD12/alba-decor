@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { X, Phone, Mail, MapPin, Calendar, Home, Palette } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import emailjs from '@emailjs/browser';
 
 interface QuoteModalProps {
   isOpen: boolean;
@@ -36,13 +37,50 @@ export default function QuoteModal({ isOpen, onClose }: QuoteModalProps) {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Here you would integrate with your email service (EmailJS, Formspree, etc.)
-    // For now, we'll simulate the submission
     try {
-      // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 2000));
+      // EmailJS configuration
+      const serviceId = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID;
+      const templateId = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID;
+      const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY;
+
+      if (!serviceId || !templateId || !publicKey) {
+        throw new Error('EmailJS configuration missing');
+      }
+
+      // Prepare template parameters
+      const templateParams = {
+        to_email: 'fjorentin@albadecor.co.uk',
+        from_name: formData.name,
+        from_email: formData.email,
+        phone: formData.phone,
+        postcode: formData.postcode,
+        service_type: formData.serviceType,
+        project_description: formData.projectDescription,
+        timeframe: formData.timeframe,
+        budget: formData.budget,
+        message: `
+New Quote Request from Alba Decor Website
+
+Customer Details:
+- Name: ${formData.name}
+- Email: ${formData.email}
+- Phone: ${formData.phone}
+- Postcode: ${formData.postcode}
+
+Project Details:
+- Service Type: ${formData.serviceType}
+- Timeframe: ${formData.timeframe}
+- Budget: ${formData.budget}
+
+Project Description:
+${formData.projectDescription}
+        `.trim(),
+      };
+
+      // Send email via EmailJS
+      await emailjs.send(serviceId, templateId, templateParams, publicKey);
       
-      console.log('Form submitted:', formData);
+      console.log('Quote request sent successfully');
       setIsSubmitted(true);
       
       // Reset form after 3 seconds
@@ -62,7 +100,8 @@ export default function QuoteModal({ isOpen, onClose }: QuoteModalProps) {
         onClose();
       }, 3000);
     } catch (error) {
-      console.error('Error submitting form:', error);
+      console.error('Error submitting quote request:', error);
+      alert('Sorry, there was an error sending your quote request. Please try calling us directly at 07404 304224.');
     } finally {
       setIsSubmitting(false);
     }

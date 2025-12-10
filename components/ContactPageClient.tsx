@@ -4,6 +4,7 @@ import { Button } from '@/components/ui/button';
 import { MapPin, Phone, Mail, Clock, MessageSquare, Send } from 'lucide-react';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import { useState } from 'react';
+import emailjs from '@emailjs/browser';
 
 const contactMethods = [
   {
@@ -48,9 +49,46 @@ export default function ContactPageClient() {
     window.dispatchEvent(event);
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log('Form submitted:', formData);
+    
+    try {
+      const serviceId = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID;
+      const templateId = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID;
+      const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY;
+
+      if (!serviceId || !templateId || !publicKey) {
+        throw new Error('EmailJS configuration missing');
+      }
+
+      const templateParams = {
+        to_email: 'fjorentin@albadecor.co.uk',
+        from_name: formData.name,
+        from_email: formData.email,
+        phone: formData.phone,
+        postcode: formData.postcode,
+        service: formData.service,
+        preferred_contact: formData.preferredContact,
+        message: formData.message,
+      };
+
+      await emailjs.send(serviceId, templateId, templateParams, publicKey);
+      alert('Message sent successfully! We\'ll get back to you soon.');
+      
+      // Reset form
+      setFormData({
+        name: '',
+        email: '',
+        phone: '',
+        postcode: '',
+        service: '',
+        message: '',
+        preferredContact: 'phone'
+      });
+    } catch (error) {
+      console.error('Error sending message:', error);
+      alert('Sorry, there was an error sending your message. Please try calling us directly at 07404 304224.');
+    }
   };
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
