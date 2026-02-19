@@ -1,14 +1,46 @@
 'use client';
 
 import { useState } from 'react';
+import { usePathname } from 'next/navigation';
 
 export default function WhatsAppButton() {
     const [isHovered, setIsHovered] = useState(false);
+    const pathname = usePathname();
 
-    // Alba Decor WhatsApp number (replace with actual number)
-    const whatsappNumber = "447404304224"; // UK format without + sign
-    const message = "Hello! I'm interested in your painting and decorating services. Could you please provide more information?";
+    // Alba Decor WhatsApp number
+    const whatsappNumber = "447404304224";
+    
+    // Extract location from pathname for location-aware messages
+    const getLocationMessage = () => {
+        if (pathname?.startsWith('/locations/')) {
+            const slug = pathname.split('/locations/')[1];
+            const locationName = slug
+                ?.split('-')
+                .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+                .join(' ');
+            
+            // Extract postcode from common patterns (you can enhance this)
+            const postcodeMap: { [key: string]: string } = {
+                'barnet': 'EN5',
+                'potters-bar': 'EN6',
+                'hadley-wood': 'EN4',
+                'totteridge': 'N20',
+                'enfield': 'EN1',
+                'cockfosters': 'EN4',
+                'southgate': 'N14',
+                'winchmore-hill': 'N21',
+                'cuffley': 'EN6',
+                'northaw': 'EN6'
+            };
+            
+            const postcode = postcodeMap[slug || ''] || '';
+            return `Hi Alba Decor, I'm in ${locationName}${postcode ? ` (${postcode})` : ''} and need a quote for painting/decorating services.`;
+        }
+        
+        return "Hello! I'm interested in your painting and decorating services. Could you please provide more information?";
+    };
 
+    const message = getLocationMessage();
     const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
 
     return (

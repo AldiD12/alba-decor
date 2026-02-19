@@ -128,10 +128,10 @@ export default function LocationPage({ params }: Props) {
                   <span className="block text-alba-accent italic">& Decorators in {location.name}</span>
                 </h1>
                 
-                {/* Hyper-local content hook with street names */}
+                {/* Hyper-local content hook with randomized project types */}
                 <p className="text-body-mobile text-alba-charcoal/80 mb-8 leading-relaxed">
-                  {location.localStreets && location.localStreets.length > 0 ? (
-                    <>Looking for a decorator in {location.name}? We just completed a full house renovation on {location.localStreets[0]} and saved the client £800 on materials through our trade accounts. </>
+                  {location.recentProject && location.localStreets && location.localStreets.length > 0 ? (
+                    <>Looking for a decorator in {location.name}? We just completed a {location.recentProject.type} on {location.localStreets[0]} and saved the client {location.recentProject.savings} through our trade accounts. </>
                   ) : null}
                   Expert painting and decorating services throughout {location.name} ({location.postcodes || location.postcode}). 
                   {location.description} Professional, reliable service with over 20 years experience.

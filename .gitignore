@@ -28,6 +28,9 @@ yarn-error.log*
 .env
 .env*.local
 
+# Google Cloud Service Account (NEVER COMMIT!)
+scripts/service-account.json
+
 # vercel
 .vercel
 

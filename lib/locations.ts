@@ -15,6 +15,10 @@ export interface Location {
   keyAreas?: string[];
   nearbyLocations?: string[]; // Slugs of adjacent locations for cluster interlinking
   localStreets?: string[]; // Hyper-local street names for content hooks
+  recentProject?: {
+    type: string; // e.g., "full house renovation", "exterior rendering", "kitchen cabinet painting"
+    savings: string; // e.g., "£800", "£1,200"
+  };
 }
 
 export const locations: Location[] = [
@@ -31,7 +35,11 @@ export const locations: Location[] = [
     population: 21618,
     keyAreas: ['The Causeway', 'Darkes Lane', 'Mutton Lane', 'Little Heath'],
     nearbyLocations: ['cuffley', 'northaw', 'hadley-wood', 'barnet'],
-    localStreets: ['The Causeway', 'Darkes Lane', 'Mutton Lane', 'The Walk', 'Cranborne Road']
+    localStreets: ['The Causeway', 'Darkes Lane', 'Mutton Lane', 'The Walk', 'Cranborne Road'],
+    recentProject: {
+      type: 'exterior rendering and painting project',
+      savings: '£1,200'
+    }
   },
   {
     slug: 'barnet',
@@ -46,7 +54,11 @@ export const locations: Location[] = [
     population: 57765,
     keyAreas: ['High Barnet', 'East Barnet', 'New Barnet', 'Chipping Barnet'],
     nearbyLocations: ['hadley-wood', 'totteridge', 'potters-bar', 'cockfosters'],
-    localStreets: ['High Street', 'Wood Street', 'Barnet Hill', 'Union Street', 'Moxon Street']
+    localStreets: ['High Street', 'Wood Street', 'Barnet Hill', 'Union Street', 'Moxon Street'],
+    recentProject: {
+      type: 'full house renovation',
+      savings: '£800'
+    }
   },
   {
     slug: 'hadley-wood',
@@ -61,7 +73,11 @@ export const locations: Location[] = [
     population: 4500,
     keyAreas: ['Camlet Way', 'Beech Hill', 'Crescent West', 'Lancaster Avenue'],
     nearbyLocations: ['barnet', 'cockfosters', 'potters-bar', 'enfield'],
-    localStreets: ['Camlet Way', 'Crescent West', 'Beech Hill', 'Lancaster Avenue', 'Wagon Road']
+    localStreets: ['Camlet Way', 'Crescent West', 'Beech Hill', 'Lancaster Avenue', 'Wagon Road'],
+    recentProject: {
+      type: 'luxury kitchen cabinet hand-painting',
+      savings: '£2,400'
+    }
   },
   {
     slug: 'totteridge',
@@ -76,7 +92,11 @@ export const locations: Location[] = [
     population: 5000,
     keyAreas: ['Totteridge Green', 'Totteridge Lane', 'Totteridge Common', 'Laurel Way'],
     nearbyLocations: ['barnet', 'southgate', 'cockfosters'],
-    localStreets: ['Totteridge Lane', 'Totteridge Village', 'Laurel Way', 'Totteridge Common', 'The Green']
+    localStreets: ['Totteridge Lane', 'Totteridge Village', 'Laurel Way', 'Totteridge Common', 'The Green'],
+    recentProject: {
+      type: 'period property restoration with Venetian plaster',
+      savings: '£1,800'
+    }
   },
   {
     slug: 'enfield',
@@ -91,7 +111,11 @@ export const locations: Location[] = [
     population: 156858,
     keyAreas: ['Enfield Town', 'Enfield Highway', 'Enfield Lock', 'Bush Hill Park'],
     nearbyLocations: ['cockfosters', 'winchmore-hill', 'southgate', 'hadley-wood'],
-    localStreets: ['Church Street', 'Silver Street', 'London Road', 'Windmill Hill', 'Chase Side']
+    localStreets: ['Church Street', 'Silver Street', 'London Road', 'Windmill Hill', 'Chase Side'],
+    recentProject: {
+      type: 'commercial office repaint',
+      savings: '£950'
+    }
   },
   {
     slug: 'cockfosters',
@@ -106,7 +130,11 @@ export const locations: Location[] = [
     population: 8000,
     keyAreas: ['Cockfosters Road', 'Chalk Lane', 'Bramley Road', 'Cat Hill'],
     nearbyLocations: ['hadley-wood', 'southgate', 'enfield', 'barnet'],
-    localStreets: ['Cockfosters Road', 'Chalk Lane', 'Bramley Road', 'Cat Hill', 'Snakes Lane']
+    localStreets: ['Cockfosters Road', 'Chalk Lane', 'Bramley Road', 'Cat Hill', 'Snakes Lane'],
+    recentProject: {
+      type: 'Victorian terrace interior refresh',
+      savings: '£650'
+    }
   },
   {
     slug: 'southgate',
@@ -121,7 +149,11 @@ export const locations: Location[] = [
     population: 14949,
     keyAreas: ['Southgate Green', 'The Bourne', 'Cannon Hill', 'Winchmore Hill Road'],
     nearbyLocations: ['winchmore-hill', 'cockfosters', 'enfield', 'totteridge'],
-    localStreets: ['High Street', 'Chase Side', 'The Bourne', 'Cannon Hill', 'Waterfall Road']
+    localStreets: ['High Street', 'Chase Side', 'The Bourne', 'Cannon Hill', 'Waterfall Road'],
+    recentProject: {
+      type: 'Art Deco property feature wall and decorative finishes',
+      savings: '£1,100'
+    }
   },
   {
     slug: 'winchmore-hill',
@@ -136,7 +168,11 @@ export const locations: Location[] = [
     population: 18000,
     keyAreas: ['The Green', 'Station Road', 'Hoppers Road', 'Vicars Moor Lane'],
     nearbyLocations: ['southgate', 'enfield', 'cockfosters'],
-    localStreets: ['The Green', 'Station Road', 'Hoppers Road', 'Vicars Moor Lane', 'Compton Road']
+    localStreets: ['The Green', 'Station Road', 'Hoppers Road', 'Vicars Moor Lane', 'Compton Road'],
+    recentProject: {
+      type: 'wallpaper installation and ceiling work',
+      savings: '£720'
+    }
   },
   {
     slug: 'cuffley',
@@ -151,7 +187,11 @@ export const locations: Location[] = [
     population: 4000,
     keyAreas: ['Station Road', 'Maynard Place', 'Cattlegate Road', 'The Ridgeway'],
     nearbyLocations: ['northaw', 'potters-bar'],
-    localStreets: ['Station Road', 'Maynard Place', 'Cattlegate Road', 'The Ridgeway', 'Plough Hill']
+    localStreets: ['Station Road', 'Maynard Place', 'Cattlegate Road', 'The Ridgeway', 'Plough Hill'],
+    recentProject: {
+      type: 'cottage exterior woodwork restoration',
+      savings: '£580'
+    }
   },
   {
     slug: 'northaw',
@@ -166,7 +206,11 @@ export const locations: Location[] = [
     population: 2500,
     keyAreas: ['Northaw Village', 'Coopers Lane Road', 'Judges Hill', 'Vineyards Road'],
     nearbyLocations: ['cuffley', 'potters-bar'],
-    localStreets: ['Coopers Lane Road', 'Judges Hill', 'Vineyards Road', 'Northaw Road East', 'The Ridgeway']
+    localStreets: ['Coopers Lane Road', 'Judges Hill', 'Vineyards Road', 'Northaw Road East', 'The Ridgeway'],
+    recentProject: {
+      type: 'heritage property interior and exterior refresh',
+      savings: '£1,350'
+    }
   }
 ];
 
