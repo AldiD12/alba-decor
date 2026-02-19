@@ -13,6 +13,8 @@ export interface Location {
   intro?: string; // Unique intro text for each location
   population?: number;
   keyAreas?: string[];
+  nearbyLocations?: string[]; // Slugs of adjacent locations for cluster interlinking
+  localStreets?: string[]; // Hyper-local street names for content hooks
 }
 
 export const locations: Location[] = [
@@ -27,7 +29,9 @@ export const locations: Location[] = [
     description: 'Affluent town in Hertfordshire with excellent transport links to London',
     intro: 'From executive homes near The Causeway to period properties along Darkes Lane, we provide premium painting and decorating services throughout Potters Bar.',
     population: 21618,
-    keyAreas: ['The Causeway', 'Darkes Lane', 'Mutton Lane', 'Little Heath']
+    keyAreas: ['The Causeway', 'Darkes Lane', 'Mutton Lane', 'Little Heath'],
+    nearbyLocations: ['cuffley', 'northaw', 'hadley-wood', 'barnet'],
+    localStreets: ['The Causeway', 'Darkes Lane', 'Mutton Lane', 'The Walk', 'Cranborne Road']
   },
   {
     slug: 'barnet',
@@ -40,7 +44,9 @@ export const locations: Location[] = [
     description: 'Historic market town in North London with Victorian and Edwardian properties',
     intro: 'From Victorian terraces in High Barnet to modern apartments near The Spires Shopping Centre, we are the trusted decorators for homes throughout this historic market town.',
     population: 57765,
-    keyAreas: ['High Barnet', 'East Barnet', 'New Barnet', 'Chipping Barnet']
+    keyAreas: ['High Barnet', 'East Barnet', 'New Barnet', 'Chipping Barnet'],
+    nearbyLocations: ['hadley-wood', 'totteridge', 'potters-bar', 'cockfosters'],
+    localStreets: ['High Street', 'Wood Street', 'Barnet Hill', 'Union Street', 'Moxon Street']
   },
   {
     slug: 'hadley-wood',
@@ -53,7 +59,9 @@ export const locations: Location[] = [
     description: 'Exclusive residential area known for luxury homes and green spaces',
     intro: 'Specializing in luxury homes near Hadley Wood Golf Club and the prestigious properties along Camlet Way, we deliver exceptional painting services to this exclusive enclave.',
     population: 4500,
-    keyAreas: ['Camlet Way', 'Beech Hill', 'Crescent West', 'Lancaster Avenue']
+    keyAreas: ['Camlet Way', 'Beech Hill', 'Crescent West', 'Lancaster Avenue'],
+    nearbyLocations: ['barnet', 'cockfosters', 'potters-bar', 'enfield'],
+    localStreets: ['Camlet Way', 'Crescent West', 'Beech Hill', 'Lancaster Avenue', 'Wagon Road']
   },
   {
     slug: 'totteridge',
@@ -66,7 +74,9 @@ export const locations: Location[] = [
     description: 'Prestigious village area with large detached houses and rural feel',
     intro: 'From grand detached houses around Totteridge Green to characterful properties near Laurel Farm, we provide bespoke decorating services in this prestigious village.',
     population: 5000,
-    keyAreas: ['Totteridge Green', 'Totteridge Lane', 'Totteridge Common', 'Laurel Way']
+    keyAreas: ['Totteridge Green', 'Totteridge Lane', 'Totteridge Common', 'Laurel Way'],
+    nearbyLocations: ['barnet', 'southgate', 'cockfosters'],
+    localStreets: ['Totteridge Lane', 'Totteridge Village', 'Laurel Way', 'Totteridge Common', 'The Green']
   },
   {
     slug: 'enfield',
@@ -79,7 +89,9 @@ export const locations: Location[] = [
     description: 'Large North London borough with diverse housing from Victorian terraces to modern developments',
     intro: 'Serving everything from Victorian terraces in Enfield Town to modern developments near Palace Gardens Shopping Centre, we handle diverse painting projects across this vibrant borough.',
     population: 156858,
-    keyAreas: ['Enfield Town', 'Enfield Highway', 'Enfield Lock', 'Bush Hill Park']
+    keyAreas: ['Enfield Town', 'Enfield Highway', 'Enfield Lock', 'Bush Hill Park'],
+    nearbyLocations: ['cockfosters', 'winchmore-hill', 'southgate', 'hadley-wood'],
+    localStreets: ['Church Street', 'Silver Street', 'London Road', 'Windmill Hill', 'Chase Side']
   },
   {
     slug: 'cockfosters',
@@ -92,7 +104,9 @@ export const locations: Location[] = [
     description: 'Residential area at the northern end of the Piccadilly line with period properties',
     intro: 'From period properties near Trent Park to family homes along Cockfosters Road, we provide expert painting services at the northern end of the Piccadilly line.',
     population: 8000,
-    keyAreas: ['Cockfosters Road', 'Chalk Lane', 'Bramley Road', 'Cat Hill']
+    keyAreas: ['Cockfosters Road', 'Chalk Lane', 'Bramley Road', 'Cat Hill'],
+    nearbyLocations: ['hadley-wood', 'southgate', 'enfield', 'barnet'],
+    localStreets: ['Cockfosters Road', 'Chalk Lane', 'Bramley Road', 'Cat Hill', 'Snakes Lane']
   },
   {
     slug: 'southgate',
@@ -105,7 +119,9 @@ export const locations: Location[] = [
     description: 'Affluent area with Art Deco architecture and excellent transport connections',
     intro: 'Specializing in the distinctive Art Deco properties around Southgate Station and elegant homes near Grovelands Park, we understand the unique character of this affluent area.',
     population: 14949,
-    keyAreas: ['Southgate Green', 'The Bourne', 'Cannon Hill', 'Winchmore Hill Road']
+    keyAreas: ['Southgate Green', 'The Bourne', 'Cannon Hill', 'Winchmore Hill Road'],
+    nearbyLocations: ['winchmore-hill', 'cockfosters', 'enfield', 'totteridge'],
+    localStreets: ['High Street', 'Chase Side', 'The Bourne', 'Cannon Hill', 'Waterfall Road']
   },
   {
     slug: 'winchmore-hill',
@@ -118,7 +134,9 @@ export const locations: Location[] = [
     description: 'Charming suburban area with village atmosphere and period properties',
     intro: 'From the village charm around The Green to period properties near Grovelands Park, we bring expert craftsmanship to Winchmore Hill\'s distinctive homes.',
     population: 18000,
-    keyAreas: ['The Green', 'Station Road', 'Hoppers Road', 'Vicars Moor Lane']
+    keyAreas: ['The Green', 'Station Road', 'Hoppers Road', 'Vicars Moor Lane'],
+    nearbyLocations: ['southgate', 'enfield', 'cockfosters'],
+    localStreets: ['The Green', 'Station Road', 'Hoppers Road', 'Vicars Moor Lane', 'Compton Road']
   },
   {
     slug: 'cuffley',
@@ -131,7 +149,9 @@ export const locations: Location[] = [
     description: 'Village in Hertfordshire with rural character and commuter convenience',
     intro: 'Combining rural village charm with commuter convenience, we serve characterful homes from Cuffley Station to the woodland edges of Northaw Great Wood.',
     population: 4000,
-    keyAreas: ['Station Road', 'Maynard Place', 'Cattlegate Road', 'The Ridgeway']
+    keyAreas: ['Station Road', 'Maynard Place', 'Cattlegate Road', 'The Ridgeway'],
+    nearbyLocations: ['northaw', 'potters-bar'],
+    localStreets: ['Station Road', 'Maynard Place', 'Cattlegate Road', 'The Ridgeway', 'Plough Hill']
   },
   {
     slug: 'northaw',
@@ -144,7 +164,9 @@ export const locations: Location[] = [
     description: 'Historic village surrounded by countryside with characterful properties',
     intro: 'Nestled in countryside near Northaw Great Wood, we specialize in preserving and enhancing the character of this historic village\'s unique properties.',
     population: 2500,
-    keyAreas: ['Northaw Village', 'Coopers Lane Road', 'Judges Hill', 'Vineyards Road']
+    keyAreas: ['Northaw Village', 'Coopers Lane Road', 'Judges Hill', 'Vineyards Road'],
+    nearbyLocations: ['cuffley', 'potters-bar'],
+    localStreets: ['Coopers Lane Road', 'Judges Hill', 'Vineyards Road', 'Northaw Road East', 'The Ridgeway']
   }
 ];
 
