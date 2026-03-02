@@ -27,10 +27,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     };
   }
 
-  // "Click Magnet" title format with postcode and trust signals
+  // "Click Magnet" title format - optimized for CTR
   return {
-    title: `Premium Painter ${location.name} (${location.postcodes || location.postcode}) | 20yr Exp & Insured | Alba Decor`,
-    description: `High-end painting & decorating in ${location.name}. Serving ${location.localStreets?.[0] || location.landmarks[0]} area. 20+ years experience, fully insured. 4.9★ rated. Free quotes: 07404 304224`,
+    title: `Top-Rated Painters in ${location.name} (${location.postcodes || location.postcode}) | 15yr Exp | Alba Decor`,
+    description: `Looking for premium painters in ${location.name}? Alba Decor delivers flawless finishes, dust-free prep, and fully insured work. Get a fixed-price quote today.`,
   };
 }
 

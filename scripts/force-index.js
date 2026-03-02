@@ -39,7 +39,8 @@ if (!fs.existsSync(SERVICE_ACCOUNT_PATH)) {
   process.exit(1);
 }
 
-const key = require(SERVICE_ACCOUNT_PATH);
+const keyFileContent = fs.readFileSync(SERVICE_ACCOUNT_PATH, 'utf8');
+const key = JSON.parse(keyFileContent);
 
 // Your location slugs (from lib/locations.ts)
 const locationSlugs = [
@@ -56,13 +57,11 @@ const locationSlugs = [
 ];
 
 // JWT Client for authentication
-const jwtClient = new google.auth.JWT(
-  key.client_email,
-  null,
-  key.private_key,
-  ['https://www.googleapis.com/auth/indexing'],
-  null
-);
+const jwtClient = new google.auth.JWT({
+  email: key.client_email,
+  key: key.private_key,
+  scopes: ['https://www.googleapis.com/auth/indexing']
+});
 
 /**
  * Notify Google about URL updates
