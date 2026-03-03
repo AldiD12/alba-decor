@@ -10,9 +10,9 @@ const montserrat = Montserrat({
 });
 
 export const metadata: Metadata = {
-  title: 'Alba Decor - Professional Painting & Decorating in London & Hertfordshire',
-  description: 'Expert painting, decorating, interior design & wallpaper installation services across London, Hertfordshire & M25 areas. Free quotes. Call 07404 304224.',
-  keywords: 'painters London, decorators Hertfordshire, interior painting, exterior painting, wallpaper installation, hand painted kitchens, Venetian plaster, painting contractors',
+  title: 'Spray Painting Specialists North London | Kitchen Cabinets & Exteriors | Alba Decor',
+  description: 'Expert spray painting for kitchen cabinets, furniture & exteriors in Hertfordshire & North London. Flawless finish, dust-free process. 15yr exp. Free quote: 07404 304224',
+  keywords: 'spray painting hertfordshire, spray painting north london, kitchen cabinet spray painting, furniture spray painting, exterior spray painting, HVLP spray painting, airless spray painting',
   authors: [{ name: 'Alba Decor' }],
   creator: 'Alba Decor',
   publisher: 'Alba Decor',
@@ -22,8 +22,8 @@ export const metadata: Metadata = {
     locale: 'en_GB',
     url: 'https://albadecor.co.uk',
     siteName: 'Alba Decor',
-    title: 'Alba Decor - Professional Painting & Decorating in London & Hertfordshire',
-    description: 'Expert painting, decorating, interior design & wallpaper installation services across London, Hertfordshire & M25 areas. Free quotes.',
+    title: 'Spray Painting Specialists North London | Kitchen Cabinets & Exteriors | Alba Decor',
+    description: 'Expert spray painting for kitchen cabinets, furniture & exteriors in Hertfordshire & North London. Flawless finish, dust-free process. 15yr exp.',
     images: [
       {
         url: '/images/alba-decor-og-image.jpg',

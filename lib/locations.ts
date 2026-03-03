@@ -144,15 +144,15 @@ export const locations: Location[] = [
     geo: { lat: 51.6322, lng: -0.1275 },
     landmarks: ['Southgate Station', 'Grovelands Park', 'The Bourne'],
     landmarksText: 'the iconic Art Deco Southgate Station, Grovelands Park, and The Bourne',
-    description: 'Affluent area with Art Deco architecture and excellent transport connections',
-    intro: 'Specializing in the distinctive Art Deco properties around Southgate Station and elegant homes near Grovelands Park, we understand the unique character of this affluent area.',
+    description: 'Affluent area with Art Deco architecture and excellent transport connections. Specialist exterior painters for period properties.',
+    intro: 'Specializing in exterior painting for the distinctive Art Deco properties around Southgate Station and elegant homes near Grovelands Park. Expert in period property exterior restoration.',
     population: 14949,
     keyAreas: ['Southgate Green', 'The Bourne', 'Cannon Hill', 'Winchmore Hill Road'],
     nearbyLocations: ['winchmore-hill', 'cockfosters', 'enfield', 'totteridge'],
     localStreets: ['High Street', 'Chase Side', 'The Bourne', 'Cannon Hill', 'Waterfall Road'],
     recentProject: {
-      type: 'Art Deco property feature wall and decorative finishes',
-      savings: '£1,100'
+      type: 'Art Deco exterior painting and render refresh',
+      savings: '£1,400'
     }
   },
   {

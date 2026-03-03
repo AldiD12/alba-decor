@@ -1,12 +1,12 @@
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Professional Spray Painting Services London | Alba Decor',
-  description: 'Expert spray painting for kitchen cabinets, doors, furniture & UPVC windows in North London & Hertfordshire. Factory-quality finishes using HVLP systems. Call 07404304224',
-  keywords: 'spray painting London, kitchen cabinet spraying Hertfordshire, door spraying, furniture spraying, UPVC window painting, professional spray finishes, Barnet spray painters',
+  title: 'Spray Painting Hertfordshire | Kitchen Cabinets & Exteriors | Position #1 | Alba Decor',
+  description: 'TOP-RATED spray painting Hertfordshire & North London. Kitchen cabinets, furniture, UPVC. Factory finish, dust-free. 15yr exp, fully insured. Free quote: 07404 304224',
+  keywords: 'spray painting hertfordshire, spray painting north london, kitchen cabinet spray painting hertfordshire, furniture spray painting, exterior spray painting hertfordshire, HVLP spray painting, airless spray painting, cabinet spraying barnet',
   openGraph: {
-    title: 'Professional Spray Painting Services London | Alba Decor',
-    description: 'Expert spray painting for kitchen cabinets, doors, furniture & UPVC windows in North London & Hertfordshire. Factory-quality finishes using HVLP systems.',
+    title: 'Spray Painting Hertfordshire | Kitchen Cabinets & Exteriors | #1 Rated | Alba Decor',
+    description: 'TOP-RATED spray painting Hertfordshire & North London. Kitchen cabinets, furniture, UPVC. Factory finish, dust-free. 15yr exp, fully insured.',
     url: 'https://albadecor.co.uk/services/spray-painting',
   },
 };
