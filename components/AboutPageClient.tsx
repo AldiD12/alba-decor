@@ -98,7 +98,7 @@ export default function AboutPageClient() {
                             "@type": "LocalBusiness",
                             "name": "Alba Decor",
                             "description": "Professional painting, decorating, and interior design services across London and Hertfordshire",
-                            "foundingDate": "2015",
+                            "foundingDate": "2011",
                             "numberOfEmployees": "10-20",
                             "slogan": "Transforming Spaces, Exceeding Expectations",
                             "knowsAbout": [
