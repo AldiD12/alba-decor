@@ -12,6 +12,6 @@ export default function robots(): MetadataRoute.Robots {
         '/private/',
       ],
     },
-    sitemap: 'https://albahomes.co.uk/sitemap.xml',
+    sitemap: 'https://albadecor.co.uk/sitemap.xml',
   };
 }

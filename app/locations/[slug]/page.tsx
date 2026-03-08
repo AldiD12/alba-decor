@@ -89,8 +89,8 @@ export default function LocationPage({ params }: Props) {
             },
             "aggregateRating": {
               "@type": "AggregateRating",
-              "ratingValue": "4.9",
-              "reviewCount": "127",
+              "ratingValue": "5.0",
+              "reviewCount": "17",
               "bestRating": "5",
               "worstRating": "1"
             },

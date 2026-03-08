@@ -78,7 +78,7 @@ export default function RootLayout({
       "legalName": "Alba Decor",
       "description": "Professional painting, decorating, and wallpaper installation services across North London and Hertfordshire. Over 20 years of experience serving Barnet, Enfield, Watford and surrounding areas.",
       "url": "https://albadecor.co.uk",
-      "telephone": "+447387844751",
+      "telephone": "07404304224",
       "email": "fjorentin@albadecor.co.uk",
       "priceRange": "££",
       "image": "https://albadecor.co.uk/images/alba-decor-logo.png",
@@ -239,7 +239,7 @@ export default function RootLayout({
         "name": "Fjorentin Zoga",
         "jobTitle": "Owner & Master Decorator"
       },
-      "foundingDate": "2005",
+      "foundingDate": "2011",
       "slogan": "Professional Painting & Decorating Across North London & Hertfordshire",
       "knowsAbout": [
         "Interior Painting",
@@ -254,10 +254,10 @@ export default function RootLayout({
       ],
       "aggregateRating": {
         "@type": "AggregateRating",
-        "ratingValue": "4.2",
-        "reviewCount": "20",
+        "ratingValue": "5.0",
+        "reviewCount": "17",
         "bestRating": "5",
-        "worstRating": "3"
+        "worstRating": "1"
       }
     })
   }}

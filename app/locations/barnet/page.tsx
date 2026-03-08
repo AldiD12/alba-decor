@@ -79,7 +79,7 @@ export default function BarnetPage() {
             "name": "Alba Decor - Painters & Decorators Barnet",
             "description": "Professional painting and decorating services in Barnet, covering EN4, EN5, N11, N12, N14, N20 postcodes",
             "telephone": "07404304224",
-            "url": "https://albahomes.co.uk/locations/barnet",
+            "url": "https://albadecor.co.uk/locations/barnet",
             "address": {
               "@type": "PostalAddress",
               "addressLocality": "Barnet",
