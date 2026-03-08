@@ -9,6 +9,9 @@ export const metadata: Metadata = {
     description: 'Bespoke decorative finishes including Venetian plaster, faux effects, textured walls, feature walls & custom murals. Premium artisan techniques in North London & Hertfordshire.',
     url: 'https://albadecor.co.uk/services/decorative-finishes',
   },
+  alternates: {
+    canonical: 'https://albadecor.co.uk/services/decorative-finishes',
+  },
 };
 
 export default function DecorativeFinishes() {

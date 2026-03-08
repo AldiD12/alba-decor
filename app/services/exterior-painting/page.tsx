@@ -9,6 +9,9 @@ export const metadata: Metadata = {
     description: 'Professional exterior house painting in North London & Hertfordshire. Expert painting for render, woodwork, decks, fences & more. Weather-resistant finishes.',
     url: 'https://albadecor.co.uk/services/exterior-painting',
   },
+  alternates: {
+    canonical: 'https://albadecor.co.uk/services/exterior-painting',
+  },
 };
 
 export default function ExteriorPainting() {

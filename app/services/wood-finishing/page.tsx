@@ -9,6 +9,9 @@ export const metadata: Metadata = {
     description: 'Expert wood finishing services including staining, varnishing & sealing for staircases, doors, floors & interior woodwork in North London & Hertfordshire.',
     url: 'https://albadecor.co.uk/services/wood-finishing',
   },
+  alternates: {
+    canonical: 'https://albadecor.co.uk/services/wood-finishing',
+  },
 };
 
 export default function WoodFinishing() {

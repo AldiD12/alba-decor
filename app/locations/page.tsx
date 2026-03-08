@@ -5,6 +5,9 @@ import { locations } from '@/lib/locations';
 export const metadata: Metadata = {
   title: 'Areas We Cover in North London & Hertfordshire | Alba Decor',
   description: 'Professional painting and decorating services across North London and Hertfordshire. Covering Barnet, Potters Bar, Hadley Wood, Enfield and surrounding areas.',
+  alternates: {
+    canonical: 'https://albadecor.co.uk/locations',
+  },
 };
 
 export default function LocationsPage() {

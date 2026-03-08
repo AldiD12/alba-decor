@@ -9,6 +9,9 @@ export const metadata: Metadata = {
     description: 'Professional commercial painting for offices, retail, restaurants & hotels across London & Hertfordshire. Minimal disruption, flexible scheduling, fully insured.',
     url: 'https://albadecor.co.uk/services/commercial-painting',
   },
+  alternates: {
+    canonical: 'https://albadecor.co.uk/services/commercial-painting',
+  },
 };
 
 export default function CommercialPainting() {

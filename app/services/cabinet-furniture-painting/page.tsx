@@ -9,6 +9,9 @@ export const metadata: Metadata = {
     description: 'Transform your kitchen for a fraction of replacement cost. Expert cabinet painting, hand-painted kitchens & furniture refinishing in North London.',
     url: 'https://albadecor.co.uk/services/cabinet-furniture-painting',
   },
+  alternates: {
+    canonical: 'https://albadecor.co.uk/services/cabinet-furniture-painting',
+  },
 };
 
 export default function CabinetFurniturePainting() {

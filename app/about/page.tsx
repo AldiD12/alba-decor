@@ -6,6 +6,9 @@ export const metadata: Metadata = {
   title: 'About Alba Decor | Professional Painters & Decorators London & Hertfordshire',
   description: 'Learn about Alba Decor - expert painters & decorators serving London & Hertfordshire since 2015. Professional, reliable, and trusted by hundreds of satisfied customers.',
   keywords: 'about Alba Decor, painters London, decorators Hertfordshire, painting company, professional decorators, painting contractors',
+  alternates: {
+    canonical: 'https://albadecor.co.uk/about',
+  },
   openGraph: {
     title: 'About Alba Decor | Professional Painters & Decorators',
     description: 'Learn about Alba Decor - expert painters & decorators serving London & Hertfordshire.',

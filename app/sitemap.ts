@@ -57,7 +57,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'decorative-finishes',
     'wallpaper-services',
     'wood-finishing',
-    'floor-sanding-varnishing',
+    'floor-services',
     'silicone-sealing',
     'commercial-painting',
     'residential-painting',
@@ -95,9 +95,20 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.9,
   }));
 
+  // Blog posts
+  const blogPosts = [
+    {
+      url: `${baseUrl}/blog/kitchen-cabinet-painting-vs-replacement-cost-guide-2025`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly' as const,
+      priority: 0.7,
+    },
+  ];
+
   return [
     ...mainPages,
     ...consolidatedServicePages,
     ...locationPages,
+    ...blogPosts,
   ];
 }

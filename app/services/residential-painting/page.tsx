@@ -9,6 +9,9 @@ export const metadata: Metadata = {
     description: 'Professional residential painting services in North London & Hertfordshire. Interior & exterior house painting, new builds, renovations.',
     url: 'https://albadecor.co.uk/services/residential-painting',
   },
+  alternates: {
+    canonical: 'https://albadecor.co.uk/services/residential-painting',
+  },
 };
 
 export default function ResidentialPainting() {

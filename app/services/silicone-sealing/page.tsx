@@ -9,6 +9,9 @@ export const metadata: Metadata = {
     description: 'Expert silicone removal & application for bathrooms & kitchens in North London & Hertfordshire. Prevent water damage & mold. Anti-fungal sealants.',
     url: 'https://albadecor.co.uk/services/silicone-sealing',
   },
+  alternates: {
+    canonical: 'https://albadecor.co.uk/services/silicone-sealing',
+  },
 };
 
 export default function SiliconeSealing() {

@@ -9,6 +9,9 @@ export const metadata: Metadata = {
     description: 'Professional wallpaper hanging, removal & repair services in North London & Hertfordshire. Designer wallpaper installation, feature walls & commercial wallpapering.',
     url: 'https://albadecor.co.uk/services/wallpaper-services',
   },
+  alternates: {
+    canonical: 'https://albadecor.co.uk/services/wallpaper-services',
+  },
 };
 
 export default function WallpaperServices() {

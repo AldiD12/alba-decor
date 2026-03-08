@@ -9,6 +9,9 @@ export const metadata: Metadata = {
     description: 'Expert color consultation services in North London & Hertfordshire. Interior paint color selection, design advice & color matching. Perfect your space with professional guidance.',
     url: 'https://albadecor.co.uk/services/color-consultation',
   },
+  alternates: {
+    canonical: 'https://albadecor.co.uk/services/color-consultation',
+  },
 };
 
 export default function ColorConsultation() {

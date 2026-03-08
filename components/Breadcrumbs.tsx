@@ -19,11 +19,27 @@ export default function Breadcrumbs({ items, className = '' }: BreadcrumbsProps)
     ...items
   ];
 
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": allItems.map((item, index) => ({
+      "@type": "ListItem",
+      "position": index + 1,
+      "name": item.name,
+      "item": `https://albadecor.co.uk${item.url}`,
+    })),
+  };
+
   return (
-    <nav 
-      className={`flex items-center space-x-2 text-sm text-alba-charcoal/70 mb-8 ${className}`}
-      aria-label="Breadcrumb"
-    >
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <nav
+        className={`flex items-center space-x-2 text-sm text-alba-charcoal/70 mb-8 ${className}`}
+        aria-label="Breadcrumb"
+      >
       <ol className="flex items-center space-x-2">
         {allItems.map((item, index) => (
           <li key={index} className="flex items-center">
@@ -48,5 +64,6 @@ export default function Breadcrumbs({ items, className = '' }: BreadcrumbsProps)
         ))}
       </ol>
     </nav>
+    </>
   );
 }
