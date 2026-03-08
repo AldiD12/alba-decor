@@ -1,11 +1,11 @@
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Decorative Finishes & Specialty Painting London | Alba Decor',
+  title: 'Decorative Finishes London | Alba Decor',
   description: 'Bespoke decorative finishes including Venetian plaster, faux effects, textured walls, feature walls & custom murals. Premium artisan techniques in North London & Hertfordshire. Call 07404304224',
   keywords: 'decorative finishes London, Venetian plaster Hertfordshire, faux painting, textured walls, feature walls, custom murals, specialty painting, luxury interior finishes, Barnet decorators',
   openGraph: {
-    title: 'Decorative Finishes & Specialty Painting London | Alba Decor',
+    title: 'Decorative Finishes London | Alba Decor',
     description: 'Bespoke decorative finishes including Venetian plaster, faux effects, textured walls, feature walls & custom murals. Premium artisan techniques in North London & Hertfordshire.',
     url: 'https://albadecor.co.uk/services/decorative-finishes',
   },

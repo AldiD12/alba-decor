@@ -29,13 +29,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   // "Click Magnet" title format - optimized for CTR
   return {
-    title: `Top-Rated Painters in ${location.name} (${location.postcodes || location.postcode}) | 15yr Exp | Alba Decor`,
+    title: `Painters in ${location.name} | Free Quote | Alba Decor`,
     description: `Looking for premium painters in ${location.name}? Alba Decor delivers flawless finishes, dust-free prep, and fully insured work. Get a fixed-price quote today.`,
     alternates: {
       canonical: `https://albadecor.co.uk/locations/${location.slug}`,
     },
     openGraph: {
-      title: `Top-Rated Painters in ${location.name} | Alba Decor`,
+      title: `Painters in ${location.name} | Free Quote | Alba Decor`,
       description: `Looking for premium painters in ${location.name}? Alba Decor delivers flawless finishes, dust-free prep, and fully insured work. Get a fixed-price quote today.`,
       url: `https://albadecor.co.uk/locations/${location.slug}`,
       images: [{ url: '/images/alba-decor-og-image.jpg', width: 1200, height: 630 }],

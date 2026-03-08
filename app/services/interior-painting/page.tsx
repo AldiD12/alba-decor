@@ -1,11 +1,11 @@
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Interior Painting Services London & Hertfordshire | Alba Decor',
+  title: 'Interior Painting London | Alba Decor',
   description: 'Professional interior painting services in North London and Hertfordshire. Expert painting for walls, ceilings, doors, trim and woodwork. Free quotes. Call 07404304224',
   keywords: 'interior painting London, interior painters Hertfordshire, wall painting, ceiling painting, door painting, trim painting, drywall painting, Barnet painters, Enfield decorators',
   openGraph: {
-    title: 'Interior Painting Services London & Hertfordshire | Alba Decor',
+    title: 'Interior Painting London | Alba Decor',
     description: 'Professional interior painting services in North London and Hertfordshire. Expert painting for walls, ceilings, doors, trim and woodwork.',
     url: 'https://albadecor.co.uk/services/interior-painting',
   },

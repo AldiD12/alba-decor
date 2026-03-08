@@ -1,11 +1,11 @@
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Hand-Painted Kitchens & Cabinet Painting London | Alba Decor',
+  title: 'Hand-Painted Kitchens London | Alba Decor',
   description: 'Transform your kitchen for a fraction of replacement cost. Expert cabinet painting, hand-painted kitchens & furniture refinishing in North London. Save £1000s. Call 07404304224',
   keywords: 'hand painted kitchens London, cabinet painting Hertfordshire, kitchen cabinet refinishing, furniture painting, kitchen transformation, spray painted cabinets, Barnet kitchen painters',
   openGraph: {
-    title: 'Hand-Painted Kitchens & Cabinet Painting London | Alba Decor',
+    title: 'Hand-Painted Kitchens London | Alba Decor',
     description: 'Transform your kitchen for a fraction of replacement cost. Expert cabinet painting, hand-painted kitchens & furniture refinishing in North London.',
     url: 'https://albadecor.co.uk/services/cabinet-furniture-painting',
   },

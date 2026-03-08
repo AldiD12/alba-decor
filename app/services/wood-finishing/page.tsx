@@ -1,11 +1,11 @@
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Professional Wood Staining & Varnishing Services London | Alba Decor',
+  title: 'Wood Staining & Varnishing | Alba Decor',
   description: 'Expert wood finishing services including staining, varnishing & sealing for staircases, doors, floors & interior woodwork in North London & Hertfordshire. Call 07404304224',
   keywords: 'wood staining London, wood varnishing Hertfordshire, wood finishing, staircase refinishing, door staining, wood sealing, interior wood treatment, Barnet wood finishing',
   openGraph: {
-    title: 'Professional Wood Staining & Varnishing Services London | Alba Decor',
+    title: 'Wood Staining & Varnishing | Alba Decor',
     description: 'Expert wood finishing services including staining, varnishing & sealing for staircases, doors, floors & interior woodwork in North London & Hertfordshire.',
     url: 'https://albadecor.co.uk/services/wood-finishing',
   },

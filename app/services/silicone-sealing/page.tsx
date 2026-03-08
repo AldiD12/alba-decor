@@ -1,11 +1,11 @@
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Professional Silicone Sealing Services London | Alba Decor',
+  title: 'Silicone Sealing Services | Alba Decor',
   description: 'Expert silicone removal & application for bathrooms & kitchens in North London & Hertfordshire. Prevent water damage & mold. Anti-fungal sealants. Call 07404304224',
   keywords: 'silicone sealing London, bathroom silicone removal Hertfordshire, kitchen silicone sealing, shower sealing, bath sealing, mold prevention, Barnet silicone services',
   openGraph: {
-    title: 'Professional Silicone Sealing Services London | Alba Decor',
+    title: 'Silicone Sealing Services | Alba Decor',
     description: 'Expert silicone removal & application for bathrooms & kitchens in North London & Hertfordshire. Prevent water damage & mold. Anti-fungal sealants.',
     url: 'https://albadecor.co.uk/services/silicone-sealing',
   },

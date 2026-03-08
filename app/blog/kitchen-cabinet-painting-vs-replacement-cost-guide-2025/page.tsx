@@ -4,7 +4,7 @@ import { Metadata } from 'next';
 import { QuoteButton } from '@/components/QuoteButton';
 
 export const metadata: Metadata = {
-  title: 'Kitchen Cabinet Painting vs Replacement: Complete 2025 Cost Guide | Alba Decor',
+  title: 'Cabinet Painting vs Replacement: 2025 Costs',
   description: 'Should you paint or replace your kitchen cabinets in 2025? Our comprehensive cost comparison guide reveals potential savings of £8,000+. Expert advice from Alba Decor professionals.',
   keywords: 'kitchen cabinet painting cost 2025, cabinet replacement vs painting, kitchen renovation costs London, hand painted kitchen cabinets, kitchen makeover budget, Alba Decor kitchen painting',
   alternates: {
@@ -27,9 +27,83 @@ export const metadata: Metadata = {
 
 
 
+const blogPostSchema = {
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Kitchen Cabinet Painting vs Replacement: Complete 2025 Cost Guide",
+  "datePublished": "2025-01-21",
+  "dateModified": "2025-01-21",
+  "author": {
+    "@type": "Organization",
+    "name": "Alba Decor",
+    "url": "https://albadecor.co.uk"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Alba Decor",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://albadecor.co.uk/images/alba-decor-logo.png"
+    }
+  },
+  "image": "https://albadecor.co.uk/images/gallery/kitchen/kitchen-cabinets-hand-painted.webp",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://albadecor.co.uk/blog/kitchen-cabinet-painting-vs-replacement-cost-guide-2025"
+  }
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How long does painted cabinet finish last?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "With professional preparation and premium paints, painted cabinets last 10-15 years. Alba Decor uses only the highest quality primers and topcoats for maximum durability."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can you paint over laminate cabinets?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes! Modern bonding primers allow us to paint over laminate, melamine, and even glossy surfaces. The key is proper surface preparation and using the right products."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What's the best paint for kitchen cabinets?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We recommend Farrow & Ball Estate Eggshell or Little Greene Intelligent Eggshell for their durability and beautiful finish. These paints resist moisture, grease, and daily wear."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much disruption will there be?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Minimal! We work around your schedule, and you can still use your kitchen for basic tasks. Most projects are completed in 2-3 days with full functionality restored each evening."
+      }
+    }
+  ]
+};
+
 export default function KitchenCabinetCostGuidePage() {
 
   return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(blogPostSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
     <main className="pt-32">
       {/* Article Header */}
       <section className="py-12 bg-alba-warm-white">
@@ -408,5 +482,6 @@ export default function KitchenCabinetCostGuidePage() {
         </div>
       </section>
     </main>
+    </>
   );
 }

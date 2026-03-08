@@ -3,14 +3,14 @@ import { Metadata } from 'next';
 import { Calendar, Clock, User } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'Alba Decor Blog | Painting & Decorating Tips, Guides & Inspiration',
+  title: 'Painting Tips & Guides | Alba Decor Blog',
   description: 'Expert painting and decorating advice from Alba Decor. Get professional tips, cost guides, and inspiration for your home improvement projects in London & Hertfordshire.',
   keywords: 'painting tips, decorating advice, home improvement blog, kitchen painting guide, interior design tips, Alba Decor blog',
   alternates: {
     canonical: 'https://albadecor.co.uk/blog',
   },
   openGraph: {
-    title: 'Alba Decor Blog | Professional Painting & Decorating Advice',
+    title: 'Painting Tips & Guides | Alba Decor Blog',
     description: 'Expert painting and decorating advice from Alba Decor professionals.',
     url: 'https://albadecor.co.uk/blog',
   },

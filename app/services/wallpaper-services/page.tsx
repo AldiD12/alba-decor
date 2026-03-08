@@ -1,11 +1,11 @@
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Expert Wallpaper Installation & Removal Services London | Alba Decor',
+  title: 'Wallpaper Installation London | Alba Decor',
   description: 'Professional wallpaper hanging, removal & repair services in North London & Hertfordshire. Designer wallpaper installation, feature walls & commercial wallpapering. Call 07404304224',
   keywords: 'wallpaper installation London, wallpaper hanging Hertfordshire, wallpaper removal, feature wall wallpaper, designer wallpaper hanging, commercial wallpaper, Barnet wallpaper services',
   openGraph: {
-    title: 'Expert Wallpaper Installation & Removal Services London | Alba Decor',
+    title: 'Wallpaper Installation London | Alba Decor',
     description: 'Professional wallpaper hanging, removal & repair services in North London & Hertfordshire. Designer wallpaper installation, feature walls & commercial wallpapering.',
     url: 'https://albadecor.co.uk/services/wallpaper-services',
   },

@@ -2,14 +2,14 @@ import { Metadata } from 'next';
 import GalleryClient from './GalleryClient';
 
 export const metadata: Metadata = {
-  title: 'Gallery - Alba Decor Project Portfolio | Painting & Decorating London & Hertfordshire',
+  title: 'Our Work | Painting Portfolio | Alba Decor',
   description: 'View our portfolio of professional painting, decorating, and interior design projects across London and Hertfordshire. See quality craftsmanship and transformations by Alba Decor.',
   keywords: 'Alba Decor gallery, painting projects London, decorating portfolio Hertfordshire, interior design gallery, kitchen painting examples, exterior painting projects, wallpaper installation gallery',
   alternates: {
     canonical: 'https://albadecor.co.uk/gallery',
   },
   openGraph: {
-    title: 'Alba Decor Project Gallery | Professional Painting & Decorating Portfolio',
+    title: 'Our Work | Painting Portfolio | Alba Decor',
     description: 'View our portfolio of professional painting, decorating, and interior design projects across London and Hertfordshire.',
     url: 'https://albadecor.co.uk/gallery',
     images: [

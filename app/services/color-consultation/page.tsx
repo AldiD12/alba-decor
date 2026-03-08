@@ -1,11 +1,11 @@
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Professional Color Consultation & Design Advice London | Alba Decor',
+  title: 'Colour Consultation London | Alba Decor',
   description: 'Expert color consultation services in North London & Hertfordshire. Interior paint color selection, design advice & color matching. Perfect your space with professional guidance. Call 07404304224',
   keywords: 'color consultation London, interior color advice Hertfordshire, paint color selection, color matching services, interior design advice, color psychology, Barnet color consultants',
   openGraph: {
-    title: 'Professional Color Consultation & Design Advice London | Alba Decor',
+    title: 'Colour Consultation London | Alba Decor',
     description: 'Expert color consultation services in North London & Hertfordshire. Interior paint color selection, design advice & color matching. Perfect your space with professional guidance.',
     url: 'https://albadecor.co.uk/services/color-consultation',
   },

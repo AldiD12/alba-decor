@@ -1,11 +1,11 @@
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Exterior Painting Services London & Hertfordshire | Alba Decor',
+  title: 'Exterior Painting London | Alba Decor',
   description: 'Professional exterior house painting in North London & Hertfordshire. Expert painting for render, woodwork, decks, fences & more. Weather-resistant finishes. Call 07404304224',
   keywords: 'exterior painting London, exterior house painting Hertfordshire, render painting, masonry painting, deck painting, fence painting, weathershield painting, Barnet exterior painters',
   openGraph: {
-    title: 'Exterior Painting Services London & Hertfordshire | Alba Decor',
+    title: 'Exterior Painting London | Alba Decor',
     description: 'Professional exterior house painting in North London & Hertfordshire. Expert painting for render, woodwork, decks, fences & more. Weather-resistant finishes.',
     url: 'https://albadecor.co.uk/services/exterior-painting',
   },
