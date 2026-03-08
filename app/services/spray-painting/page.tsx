@@ -9,6 +9,9 @@ export const metadata: Metadata = {
     description: 'TOP-RATED spray painting Hertfordshire & North London. Kitchen cabinets, furniture, UPVC. Factory finish, dust-free. 15yr exp, fully insured.',
     url: 'https://albadecor.co.uk/services/spray-painting',
   },
+  alternates: {
+    canonical: 'https://albadecor.co.uk/services/spray-painting',
+  },
 };
 
 export default function SprayPainting() {

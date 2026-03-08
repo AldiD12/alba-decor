@@ -31,6 +31,15 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: `Top-Rated Painters in ${location.name} (${location.postcodes || location.postcode}) | 15yr Exp | Alba Decor`,
     description: `Looking for premium painters in ${location.name}? Alba Decor delivers flawless finishes, dust-free prep, and fully insured work. Get a fixed-price quote today.`,
+    alternates: {
+      canonical: `https://albadecor.co.uk/locations/${location.slug}`,
+    },
+    openGraph: {
+      title: `Top-Rated Painters in ${location.name} | Alba Decor`,
+      description: `Looking for premium painters in ${location.name}? Alba Decor delivers flawless finishes, dust-free prep, and fully insured work. Get a fixed-price quote today.`,
+      url: `https://albadecor.co.uk/locations/${location.slug}`,
+      images: [{ url: '/images/alba-decor-og-image.jpg', width: 1200, height: 630 }],
+    },
   };
 }
 
@@ -313,12 +322,7 @@ export default function LocationPage({ params }: Props) {
                 </h3>
 
                 <p className="text-alba-charcoal/80 leading-relaxed mb-6">
-                  In addition to {location.name}, we regularly work in{' '}
-                  <a href="/locations/barnet" className="text-alba-accent hover:underline font-medium">Barnet</a>,{' '}
-                  <a href="/locations/hadley-wood" className="text-alba-accent hover:underline font-medium">Hadley Wood</a>,{' '}
-                  <a href="/locations/potters-bar" className="text-alba-accent hover:underline font-medium">Potters Bar</a>, and{' '}
-                  <a href="/locations/enfield" className="text-alba-accent hover:underline font-medium">Enfield</a>. 
-                  We serve the wider North London and South Hertfordshire area.
+                  In addition to {location.name}, we serve the wider North London and South Hertfordshire area.
                 </p>
 
                 {/* Cluster Interlinking - Nearby Locations */}

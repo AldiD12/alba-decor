@@ -39,8 +39,8 @@ export const metadata: Metadata = {
     description: 'Expert painting & decorating services in London & Hertfordshire. Free quotes.',
     images: ['/images/alba-decor-twitter-card.jpg'],
   },
-  verification: {
-    google: 'your-google-verification-code',
+  alternates: {
+    canonical: 'https://albadecor.co.uk',
   },
   icons: {
     icon: '/favicon.png',
@@ -59,7 +59,7 @@ export default function RootLayout({
       <head>
         <link rel="preload" as="image" href="/images/hero-kitchen.webp" />
         <link rel="preload" as="image" href="/images/alba-decor-logo.png" />
-        <link rel="canonical" href="https://albadecor.co.uk" />
+
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="theme-color" content="#162F4F" />
         <link rel="icon" href="/favicon.ico" />
@@ -229,11 +229,6 @@ export default function RootLayout({
       ],
       "paymentAccepted": ["Cash", "Credit Card", "Bank Transfer"],
       "currenciesAccepted": "GBP",
-      "sameAs": [
-        // Add social profiles when available
-        // "https://www.facebook.com/albadecor",
-        // "https://www.instagram.com/albadecor"
-      ],
       "founder": {
         "@type": "Person",
         "name": "Fjorentin Zoga",

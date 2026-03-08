@@ -9,6 +9,9 @@ export const metadata: Metadata = {
     description: 'Professional interior painting services in North London and Hertfordshire. Expert painting for walls, ceilings, doors, trim and woodwork.',
     url: 'https://albadecor.co.uk/services/interior-painting',
   },
+  alternates: {
+    canonical: 'https://albadecor.co.uk/services/interior-painting',
+  },
 };
 
 export default function InteriorPainting() {

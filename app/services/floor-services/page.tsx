@@ -7,7 +7,10 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Floor Sanding & Varnishing Services London | Alba Decor',
     description: 'Professional floor sanding, refinishing & restoration services in North London & Hertfordshire. Restore wooden floors to their former glory. Dust-free sanding.',
-    url: 'https://albadecor.co.uk/services/floor-sanding-varnishing',
+    url: 'https://albadecor.co.uk/services/floor-services',
+  },
+  alternates: {
+    canonical: 'https://albadecor.co.uk/services/floor-services',
   },
 };
 

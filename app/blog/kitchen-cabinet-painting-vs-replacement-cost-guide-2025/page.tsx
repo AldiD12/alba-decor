@@ -7,6 +7,9 @@ export const metadata: Metadata = {
   title: 'Kitchen Cabinet Painting vs Replacement: Complete 2025 Cost Guide | Alba Decor',
   description: 'Should you paint or replace your kitchen cabinets in 2025? Our comprehensive cost comparison guide reveals potential savings of £8,000+. Expert advice from Alba Decor professionals.',
   keywords: 'kitchen cabinet painting cost 2025, cabinet replacement vs painting, kitchen renovation costs London, hand painted kitchen cabinets, kitchen makeover budget, Alba Decor kitchen painting',
+  alternates: {
+    canonical: 'https://albadecor.co.uk/blog/kitchen-cabinet-painting-vs-replacement-cost-guide-2025',
+  },
   openGraph: {
     title: 'Kitchen Cabinet Painting vs Replacement: Save £8,000+ in 2025',
     description: 'Comprehensive cost guide comparing cabinet painting vs replacement. Expert insights from Alba Decor professionals.',
