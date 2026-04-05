@@ -19,6 +19,7 @@ export interface Location {
     type: string; // e.g., "full house renovation", "exterior rendering", "kitchen cabinet painting"
     savings: string; // e.g., "£800", "£1,200"
   };
+  propertyInsights?: string[]; // Unique architectural insights to break programmatic boilerplate
 }
 
 export const locations: Location[] = [
@@ -58,7 +59,12 @@ export const locations: Location[] = [
     recentProject: {
       type: 'full house renovation',
       savings: '£800'
-    }
+    },
+    propertyInsights: [
+      "Barnet\'s housing stock is wonderfully diverse, with a significant concentration of Victorian and Edwardian properties, particularly around High Barnet and Chipping Barnet. These period homes often feature intricate cornicing, ceiling roses, and original sash windows that require specialist preparation before painting.",
+      "Many of the inter-war semi-detached houses in New Barnet and East Barnet present unique challenges with external rendering and pebbledash. Our exterior painting services specifically address weathering issues common to North London, utilizing high-quality masonry paints that allow the brickwork to breathe while protecting it from the elements.",
+      "Over the past 15 years, we\'ve completed numerous interior overhauls in the area, specifically focusing on modernizing the older layouts while preserving their historic charm. Whether it\'s a quick room refresh near The Spires or a full kitchen cabinet spray painting job on Wood Street, our local expertise ensures a flawless, long-lasting finish."
+    ]
   },
   {
     slug: 'hadley-wood',
@@ -153,7 +159,12 @@ export const locations: Location[] = [
     recentProject: {
       type: 'Art Deco exterior painting and render refresh',
       savings: '£1,400'
-    }
+    },
+    propertyInsights: [
+      "Southgate is architecturally renowned for its striking 1930s Art Deco properties, particularly in the Minchenden Estate and the areas expanding outward from the iconic Charles Holden-designed tube station. These properties boast distinctive curved bays, Crittall windows, and flat roofs that demand a completely different approach to exterior decorating than older period homes.",
+      "Beyond the Art Deco homes, Southgate features substantial Edwardian houses near Grovelands Park and The Bourne. For these properties, we frequently undertake detailed woodwork restoration and specialist exterior rendering to maintain their commanding curb appeal while ensuring they are fully weather-proofed.",
+      "Inside, many Southgate homeowners are opting for our premium airless spray painting services for kitchen cabinets and built-in wardrobes. Because many of these homes feature original, high-quality timber fixtures, spray painting provides a factory-smooth finish that completely modernizes the interior at a fraction of the cost of a full replacement."
+    ]
   },
   {
     slug: 'winchmore-hill',

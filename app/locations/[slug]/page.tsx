@@ -232,17 +232,29 @@ export default function LocationPage({ params }: Props) {
                   Professional Painting Services in {location.name}
                 </h2>
                 
-                <p className="text-alba-charcoal/80 leading-relaxed mb-6">
-                  We are the trusted decorators for homes near {location.landmarksText || location.landmarks.join(', ')}. 
-                  {location.description} Our extensive experience in {location.name} means we understand 
-                  the unique character and requirements of properties throughout the area.
-                </p>
+                {location.propertyInsights && location.propertyInsights.length > 0 ? (
+                  <div className="space-y-6 mb-8">
+                    {location.propertyInsights.map((insight, i) => (
+                      <p key={i} className="text-alba-charcoal/80 leading-relaxed">
+                        {insight}
+                      </p>
+                    ))}
+                  </div>
+                ) : (
+                  <>
+                    <p className="text-alba-charcoal/80 leading-relaxed mb-6">
+                      We are the trusted decorators for homes near {location.landmarksText || location.landmarks.join(', ')}. 
+                      {location.description} Our extensive experience in {location.name} means we understand 
+                      the unique character and requirements of properties throughout the area.
+                    </p>
 
-                <p className="text-alba-charcoal/80 leading-relaxed mb-8">
-                  Our team knows the area well and understands the specific challenges that come with 
-                  different property types in {location.name}. Whether you need interior painting, 
-                  exterior decoration, or specialist finishes, we deliver quality results every time.
-                </p>
+                    <p className="text-alba-charcoal/80 leading-relaxed mb-8">
+                      Our team knows the area well and understands the specific challenges that come with 
+                      different property types in {location.name}. Whether you need interior painting, 
+                      exterior decoration, or specialist finishes, we deliver quality results every time.
+                    </p>
+                  </>
+                )}
 
                 <h3 className="font-display text-2xl font-bold text-alba-primary mb-6">
                   What We Do in {location.name}

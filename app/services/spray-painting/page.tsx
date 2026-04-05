@@ -1,12 +1,12 @@
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Spray Painting Hertfordshire | Kitchen Cabinets & Exteriors | Position #1 | Alba Decor',
-  description: 'TOP-RATED spray painting Hertfordshire & North London. Kitchen cabinets, furniture, UPVC. Factory finish, dust-free. 15yr exp, fully insured. Free quote: 07404 304224',
+  title: "Don't Buy A New Kitchen | We Spray Paint Cabinets for 80% Less | Alba Decor",
+  description: "Ranking #1 in Hertfordshire for a reason. Don't spend £15k on a new kitchen. We airless spray paint your existing cabinets to a factory-smooth finish for 80% less.",
   keywords: 'spray painting hertfordshire, spray painting north london, kitchen cabinet spray painting hertfordshire, furniture spray painting, exterior spray painting hertfordshire, HVLP spray painting, airless spray painting, cabinet spraying barnet',
   openGraph: {
-    title: 'Spray Painting Hertfordshire | Kitchen Cabinets & Exteriors | #1 Rated | Alba Decor',
-    description: 'TOP-RATED spray painting Hertfordshire & North London. Kitchen cabinets, furniture, UPVC. Factory finish, dust-free. 15yr exp, fully insured.',
+    title: "Don't Buy A New Kitchen | We Spray Paint Cabinets for 80% Less",
+    description: "Ranking #1 in Hertfordshire for a reason. Don't spend £15k on a new kitchen. We airless spray paint your existing cabinets to a factory-smooth finish for 80% less.",
     url: 'https://albadecor.co.uk/services/spray-painting',
   },
   alternates: {
