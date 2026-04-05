@@ -114,6 +114,51 @@ export default function LocationPage({ params }: Props) {
         }}
       />
 
+      {/* FAQPage Schema — dynamically generated per location for rich results */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": `How much does a painter and decorator cost in ${location.name}?`,
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": `Professional painting and decorating in ${location.name} (${location.postcodes || location.postcode}) typically costs: a standard bedroom £400–£600, living room £600–£900, hallway with stairs £800–£1,200, and kitchen £500–£800. All prices include materials, preparation, and full cleanup. Get a free fixed-price quote from Alba Decor.`
+                }
+              },
+              {
+                "@type": "Question",
+                "name": `Do you offer spray painting services in ${location.name}?`,
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": `Yes. Alba Decor offers professional airless spray painting services throughout ${location.name} for kitchen cabinets, doors, furniture, and UPVC windows. Spray painting delivers a factory-smooth finish at 70–80% less than the cost of full replacement. Call 07404 304224 for a free quote.`
+                }
+              },
+              {
+                "@type": "Question",
+                "name": `Are you insured painters and decorators in ${location.name}?`,
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": `Yes. Alba Decor is fully insured with public liability insurance covering all painting and decorating work in ${location.name} and surrounding areas. We have over 15 years of professional experience and are trusted by homeowners throughout ${location.name} (${location.postcodes || location.postcode}).`
+                }
+              },
+              {
+                "@type": "Question",
+                "name": `How quickly can you start a decorating job in ${location.name}?`,
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": `We typically arrange a free site survey in ${location.name} within 2–3 working days of your enquiry, and can often start work within 1–2 weeks depending on project size and current schedule. Call 07404 304224 or use our online quote form to check current availability.`
+                }
+              }
+            ]
+          })
+        }}
+      />
+
       <main className="pt-32">
         {/* Breadcrumbs */}
         <div className="container mx-auto px-4 pt-8">

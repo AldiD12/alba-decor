@@ -4,15 +4,15 @@ import { Metadata } from 'next';
 import { QuoteButton } from '@/components/QuoteButton';
 
 export const metadata: Metadata = {
-  title: 'Kitchen Cabinet Painting vs Replacement: Complete 2025 Cost Guide | Alba Decor',
-  description: 'Should you paint or replace your kitchen cabinets in 2025? Our comprehensive cost comparison guide reveals potential savings of £8,000+. Expert advice from Alba Decor professionals.',
-  keywords: 'kitchen cabinet painting cost 2025, cabinet replacement vs painting, kitchen renovation costs London, hand painted kitchen cabinets, kitchen makeover budget, Alba Decor kitchen painting',
+  title: 'Cost to Paint Kitchen Cabinets 2025 (vs Replacement) | Alba Decor',
+  description: 'How much does it cost to paint kitchen cabinets in 2025? £1,200–£4,500 vs £8,000–£35,000 for replacement. Real prices for London & Hertfordshire homeowners.',
+  keywords: 'cost to paint kitchen cabinets, kitchen cabinet painting cost 2025, how much to paint kitchen cabinets, cabinet replacement vs painting, kitchen renovation costs London',
   alternates: {
     canonical: 'https://albadecor.co.uk/blog/kitchen-cabinet-painting-vs-replacement-cost-guide-2025',
   },
   openGraph: {
-    title: 'Kitchen Cabinet Painting vs Replacement: Save £8,000+ in 2025',
-    description: 'Comprehensive cost guide comparing cabinet painting vs replacement. Expert insights from Alba Decor professionals.',
+    title: 'Cost to Paint Kitchen Cabinets 2025 | Save £8,000–£30,000 vs Replacement',
+    description: 'Real 2025 prices: painting cabinets costs £1,200–£4,500 vs £8k–£35k for replacement. Expert breakdown for London & Hertfordshire homeowners.',
     url: 'https://albadecor.co.uk/blog/kitchen-cabinet-painting-vs-replacement-cost-guide-2025',
     images: [
       {
@@ -407,6 +407,59 @@ export default function KitchenCabinetCostGuidePage() {
           </div>
         </div>
       </section>
+
+      {/* FAQPage Schema — triggers FAQ rich results in Google SERPs */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "How much does it cost to paint kitchen cabinets in the UK?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Professional kitchen cabinet painting costs £1,200–£2,000 for a small kitchen (8 units), £1,800–£3,200 for a medium kitchen (12 units), and £2,500–£4,500 for a large kitchen (16+ units) in London and Hertfordshire. Prices include all materials, preparation, and cleanup."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Is it cheaper to paint or replace kitchen cabinets?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Painting is 70–85% cheaper than replacing kitchen cabinets. A full kitchen replacement costs £8,000–£35,000, while professional painting costs £1,200–£4,500 — a saving of £6,800–£30,500 for the same visual transformation."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How long does painted kitchen cabinet finish last?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "With professional preparation and premium paints (such as Farrow & Ball or Little Greene Eggshell), painted kitchen cabinets last 10–15 years. Alba Decor offers a 5-year workmanship guarantee on all cabinet painting projects."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Can you paint over laminate kitchen cabinets?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes. Modern bonding primers allow professional painters to successfully paint over laminate, melamine, and glossy surfaces. The key is correct surface preparation including degreasing, sanding, and priming with a specialist adhesion primer before applying the topcoat."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How long does it take to paint kitchen cabinets professionally?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "A professional kitchen cabinet painting project typically takes 5–7 days in total: removal and prep on day 1, painting over days 2–4, curing on day 5, and reinstallation on days 6–7. Your kitchen remains partially usable throughout most of the process."
+                }
+              }
+            ]
+          })
+        }}
+      />
     </main>
   );
 }

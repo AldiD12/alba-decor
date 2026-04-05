@@ -1,12 +1,12 @@
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Decorative Finishes & Specialty Painting London | Alba Decor',
-  description: 'Bespoke decorative finishes including Venetian plaster, faux effects, textured walls, feature walls & custom murals. Premium artisan techniques in North London & Hertfordshire. Call 07404304224',
+  title: 'Venetian Plaster & Decorative Finishes London & Hertfordshire | Alba Decor',
+  description: 'Venetian plaster from £80/m², feature walls from £400, custom murals from £500. Artisan decorative finishes in Barnet, Southgate, Enfield & across North London. Free consultation.',
   keywords: 'decorative finishes London, Venetian plaster Hertfordshire, faux painting, textured walls, feature walls, custom murals, specialty painting, luxury interior finishes, Barnet decorators',
   openGraph: {
-    title: 'Decorative Finishes & Specialty Painting London | Alba Decor',
-    description: 'Bespoke decorative finishes including Venetian plaster, faux effects, textured walls, feature walls & custom murals. Premium artisan techniques in North London & Hertfordshire.',
+    title: 'Venetian Plaster & Decorative Finishes | Barnet & North London | Alba Decor',
+    description: 'Artisan Venetian plaster, feature walls, faux effects & custom murals across North London & Hertfordshire. From £400. Free design consultation.',
     url: 'https://albadecor.co.uk/services/decorative-finishes',
   },
   alternates: {
@@ -321,38 +321,47 @@ export default function DecorativeFinishes() {
         </section>
       </article>
 
-      {/* Schema Markup */}
+      {/* FAQPage Schema — triggers FAQ rich results in Google SERPs */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "Service",
-            "serviceType": "Decorative Finishes and Specialty Painting",
-            "provider": {
-              "@type": "LocalBusiness",
-              "name": "Alba Decor",
-              "telephone": "07404304224",
-              "url": "https://albadecor.co.uk"
-            },
-            "areaServed": [
-              "Barnet",
-              "Enfield",
-              "Watford",
-              "St Albans",
-              "Harrow", 
-              "Stevenage",
-              "Hertfordshire",
-              "North London",
-              "London"
-            ],
-            "description": "Bespoke decorative finishes including Venetian plaster, faux effects, textured walls, feature walls, custom murals and specialty painting techniques for luxury interiors.",
-            "offers": {
-              "@type": "AggregateOffer",
-              "lowPrice": "400",
-              "highPrice": "2000",
-              "priceCurrency": "GBP"
-            }
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "How much does Venetian plaster cost in London?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Professional Venetian plaster application costs £80–£120 per square metre in London and Hertfordshire, including premium lime-based materials and artisan application. A typical feature wall (12–15m²) costs £960–£1,800."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How much does a painted feature wall cost?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "A professionally painted feature wall with decorative finishes (geometric designs, colour blocking, or textured effects) costs £400–£800 in London and Hertfordshire, depending on the wall size, technique complexity, and number of colours used."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How long does Venetian plaster last?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Properly applied Venetian plaster is extremely durable and can last 20–30 years or more with normal care. Lime-based Venetian plasters are also naturally antibacterial and breathable, making them ideal for bathrooms and kitchens."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Can decorative finishes be applied to any wall?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Most decorative finishes can be applied to plasterboard, plaster, and concrete walls. The key requirement is a smooth, stable, properly primed surface. We assess each wall during our free consultation and recommend the right technique for your specific surface."
+                }
+              }
+            ]
           })
         }}
       />
