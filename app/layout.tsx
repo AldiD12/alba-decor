@@ -10,6 +10,7 @@ const montserrat = Montserrat({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://albadecor.co.uk'),
   title: 'Spray Painting Specialists North London | Kitchen Cabinets & Exteriors | Alba Decor',
   description: 'Expert spray painting for kitchen cabinets, furniture & exteriors in Hertfordshire & North London. Flawless finish, dust-free process. 15yr exp. Free quote: 07404 304224',
   keywords: 'spray painting hertfordshire, spray painting north london, kitchen cabinet spray painting, furniture spray painting, exterior spray painting, HVLP spray painting, airless spray painting',
@@ -20,7 +21,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'en_GB',
-    url: 'https://albadecor.co.uk',
+    url: 'https://albadecor.co.uk/',
     siteName: 'Alba Decor',
     title: 'Spray Painting Specialists North London | Kitchen Cabinets & Exteriors | Alba Decor',
     description: 'Expert spray painting for kitchen cabinets, furniture & exteriors in Hertfordshire & North London. Flawless finish, dust-free process. 15yr exp.',
@@ -40,7 +41,7 @@ export const metadata: Metadata = {
     images: ['/images/alba-decor-twitter-card.jpg'],
   },
   alternates: {
-    canonical: 'https://albadecor.co.uk',
+    canonical: 'https://albadecor.co.uk/',
   },
   icons: {
     icon: '/favicon.png',
