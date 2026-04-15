@@ -38,6 +38,108 @@
       ],
       "destination": "https://albadecor.co.uk/:path*",
       "permanent": true
+    },
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.albadecor.co.uk"
+        }
+      ],
+      "destination": "https://albadecor.co.uk/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/services/painting-decorating/hand-painted-kitchens",
+      "destination": "/services/cabinet-furniture-painting",
+      "permanent": true
+    },
+    {
+      "source": "/services/painting-decorating/deck-painting",
+      "destination": "/services/exterior-painting",
+      "permanent": true
+    },
+    {
+      "source": "/services/painting-decorating/exterior-painting",
+      "destination": "/services/exterior-painting",
+      "permanent": true
+    },
+    {
+      "source": "/services/painting-decorating/faux-finishes",
+      "destination": "/services/decorative-finishes",
+      "permanent": true
+    },
+    {
+      "source": "/services/painting-decorating/pub-painting",
+      "destination": "/services/commercial-painting",
+      "permanent": true
+    },
+    {
+      "source": "/services/painting-decorating/textured-walls",
+      "destination": "/services/decorative-finishes",
+      "permanent": true
+    },
+    {
+      "source": "/services/painting-decorating/drywall-repair",
+      "destination": "/services/interior-painting",
+      "permanent": true
+    },
+    {
+      "source": "/services/painting-decorating/wallpaper-removal",
+      "destination": "/services/wallpaper-services",
+      "permanent": true
+    },
+    {
+      "source": "/services/painting-decorating/:path*",
+      "destination": "/services",
+      "permanent": true
+    },
+    {
+      "source": "/services/interior-decorating/specialty-paint-finishes",
+      "destination": "/services/decorative-finishes",
+      "permanent": true
+    },
+    {
+      "source": "/services/interior-decorating/luxury-interior-finishes",
+      "destination": "/services/decorative-finishes",
+      "permanent": true
+    },
+    {
+      "source": "/services/interior-decorating/textured-wall-design",
+      "destination": "/services/decorative-finishes",
+      "permanent": true
+    },
+    {
+      "source": "/services/interior-decorating",
+      "destination": "/services/interior-painting",
+      "permanent": true
+    },
+    {
+      "source": "/services/interior-decorating/:path*",
+      "destination": "/services/decorative-finishes",
+      "permanent": true
+    },
+    {
+      "source": "/services/wallpaper-installation/wallpaper-installation",
+      "destination": "/services/wallpaper-services",
+      "permanent": true
+    },
+    {
+      "source": "/services/wallpaper-installation/feature-wall-wallpapering",
+      "destination": "/services/wallpaper-services",
+      "permanent": true
+    },
+    {
+      "source": "/services/wallpaper-installation",
+      "destination": "/services/wallpaper-services",
+      "permanent": true
+    },
+    {
+      "source": "/services/wallpaper-installation/:path*",
+      "destination": "/services/wallpaper-services",
+      "permanent": true
     }
   ]
 }
+
